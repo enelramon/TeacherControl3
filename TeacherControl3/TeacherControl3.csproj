@@ -57,13 +57,29 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Css\styles.css" />
     <Content Include="Imagenes\image.jpg" />
     <Content Include="Mejoras Pendientes.txt" />
+    <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaAsitencia.aspx.cs">
+      <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaAsitencia.aspx.designer.cs">
+      <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\RegitroAsistencia.aspx.cs">
+      <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegitroAsistencia.aspx.designer.cs">
+      <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
