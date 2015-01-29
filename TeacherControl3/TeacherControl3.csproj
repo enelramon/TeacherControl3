@@ -63,6 +63,7 @@
     <Content Include="Registros\Mejoras Pendientes.txt" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
+    <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
