@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TeacherControl3.Site" %>
+
+<!--
+spigot, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Css/styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1><a href="/">Teacher<span> Control</span></a></h1>
+            <h2>Portal web de gestion de estudiantes de Aplicada I y II</h2>
+        </header>
+
+        <nav>
+            <%--MENU--%>
+            <ul>
+                <li class="start"><a href="index.html">Home</a></li>
+                <li class="selected"><a href="examples.html">Examples</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li class="end"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="body">
+            <%--CUERPO DE LA MASTER PAGE--%>
+            <section id="content">
+
+                <article>
+
+                    <form id="form1" runat="server">
+                        <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </form>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+
+                <ul>
+                    <li>
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="index.html">Home Page</a></li>
+                            <li><a href="examples.html">Style Examples</a></li>
+                            <li><a href="#">Commodo vestibulum sem mattis</a></li>
+                            <li><a href="#">Sed aliquam libero ut velit bibendum</a></li>
+                            <li><a href="#">Maecenas condimentum velit vitae</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h4>Helpful Links</h4>
+                        <ul>
+                            <li><a href="http://www.themeforest.net/?ref=spykawg" title="premium templates">Premium HTML web templates from $10</a></li>
+                            <li><a href="http://www.dreamhost.com/r.cgi?259541" title="web hosting">Cheap web hosting from Dreamhost</a></li>
+                            <li><a href="http://tuxthemes.com" title="Tux Themes">Premium WordPress themes</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </aside>
+        </div>
+        <%--FIN CUERPO DE LA MASTER PAGE--%>
+
+        <footer>
+
+            <div class="footer-bottom">
+                <p>&copy; YourSite 2010. <a href="http://zypopwebtemplates.com/">Free CSS Web Templates</a> by ZyPOP</p>
+            </div>
+        </footer>
+    </div>
+    <%--container--%>
+</body>
+</html>
