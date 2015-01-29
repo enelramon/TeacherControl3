@@ -42,7 +42,7 @@ namespace BLL
             this.Email = "";
         }
 
-        Conexion conexiondb = new Conexion();
+        ConexionDb conexiondb = new ConexionDb();
 
         public bool Insertar()
         {
@@ -88,7 +88,7 @@ namespace BLL
         public static DataTable Lista(String Campo, String FiltroWhere)
         {
 
-            Conexion conexiondb = new Conexion();
+            ConexionDb conexiondb = new ConexionDb();
             return conexiondb.BuscarDb("Select " + Campo + " from Estudiantes " + FiltroWhere);
 
         }
