@@ -1,4 +1,5 @@
 ﻿- Agregar el registro de estudiantes.
 Joelmy Jimenez Blanco
 Enel Almonte
+Edward Alcantara Gil
 Miguel Angel Ventura Aquino 
