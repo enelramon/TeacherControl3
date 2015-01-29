@@ -60,7 +60,7 @@
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Css\styles.css" />
     <Content Include="Imagenes\image.jpg" />
-    <Content Include="Mejoras Pendientes.txt" />
+    <Content Include="Registros\Mejoras Pendientes.txt" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Web.config" />
