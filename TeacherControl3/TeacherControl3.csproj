@@ -63,6 +63,7 @@
     <Content Include="Registros\Mejoras Pendientes.txt" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
+    <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +111,9 @@
       <Project>{c3bba75f-8d61-46dd-96c3-3db5435c4533}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
