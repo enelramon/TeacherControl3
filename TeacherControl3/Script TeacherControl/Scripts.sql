@@ -38,3 +38,15 @@ Create Table Usuarios (IdUsuario int  identity(1,1) primary key ,
  Clave varchar(10),
  Email varchar(50),
  esActivo bit)
+
+
+Create Table Estudiantes(
+IdRegistro int identity(1,1) primary key,
+Nombres varchar(50),
+Apellidos varchar(50),
+Telefono varchar(50),
+Celular varchar(50),
+Fecha DateTime,
+Direccion varchar(50),
+Email varchar(50)
+);
