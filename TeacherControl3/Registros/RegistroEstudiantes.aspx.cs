@@ -61,5 +61,10 @@ namespace TeacherControl3.Registros
         {
 
         }
+
+        protected void ApellidosTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

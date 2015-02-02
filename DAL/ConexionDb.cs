@@ -86,5 +86,10 @@ namespace DAL
             return dt;
         }
 
+
+        public bool EjecuctarDB(string p)
+        {
+            throw new NotImplementedException();
         }
+    }
 }
