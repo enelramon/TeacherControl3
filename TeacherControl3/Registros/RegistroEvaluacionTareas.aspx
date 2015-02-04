@@ -68,7 +68,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="GuardarButton" runat="server" OnClick="GuardarButton_Click" Text="Guardar" Width="143px" />
                 &nbsp;&nbsp;
-                <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" />
+                <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" OnClick="EliminarButton_Click1" />
                 &nbsp;&nbsp;
                 <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" Width="133px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
