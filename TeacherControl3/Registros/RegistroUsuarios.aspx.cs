@@ -21,15 +21,19 @@ namespace TeacherControl3
             }
 
         }
+
         #region "Metodos"
-        #region "llena Campo"
+
+
         private void llenacampo()
         {
             IdTextBox.Text = Convert.ToString(IdTextBox.Text);
+
             NombreTextBox.Text = usuario.Nombre;
             ClaveTextBox.Text = usuario.Clave;
             EmailTextBox.Text = usuario.Email;
             ActivoTextBox.Text = Convert.ToString(ActivoTextBox.Text);
+
             if (usuario.Nombre !=null)
             {
                 Session["Modificando"] = true;
@@ -39,8 +43,8 @@ namespace TeacherControl3
                 Session["Modificando"] = false;
             }
         }
-        #endregion
-        #region "llenaclase"
+ 
+  
         private void llenaclase()
         {
             usuario.IdUsuario = Convert.ToInt32(IdTextBox.Text);
@@ -49,27 +53,22 @@ namespace TeacherControl3
             usuario.Email = EmailTextBox.Text;
             usuario.esActivo = Convert.ToInt32(ActivoTextBox.Text);
         }
-        #endregion
-        #region "Limpia Campos"
+
         private void limpiacampos()
         {
             IdTextBox.Enabled = true;
             Session["Modificando"] = false;
-            IdTextBox.Text = null;
-            NombreTextBox.Text = null;
-            ClaveTextBox.Text = null;
-            EmailTextBox.Text = null;
-            ActivoTextBox.Text = null;
-
-        }
-        #endregion
-        protected void ClearButton_Click(object sender, EventArgs e)
-        {
             IdTextBox.Text = "";
             NombreTextBox.Text = "";
             ClaveTextBox.Text = "";
             EmailTextBox.Text = "";
             ActivoTextBox.Text = "";
+
+        }
+      
+        protected void ClearButton_Click(object sender, EventArgs e)
+        {
+            limpiacampos();
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -106,18 +105,7 @@ namespace TeacherControl3
                 MsjLabel.Text = "Seleccione el Usuario que desea eliminar";
             }
         }
-        private bool Eliminar()
-        {
-            throw new NotImplementedException();
-        }
-        private bool Insertar()
-        {
-            throw new NotImplementedException();
-        }
-        internal void Buscar()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
         #endregion "Metodos"
 }

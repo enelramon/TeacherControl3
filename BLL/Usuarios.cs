@@ -56,14 +56,7 @@ namespace BLL
                this.Email = (string)Datos.Rows[0]["Email"];
                this.esActivo = (int)Datos.Rows[0]["esActivo"];
            }
-           else
-           {
-               this.IdUsuario = 0;
-               this.Nombre = "";
-               this.Clave = "";
-               this.Email = "";
-               this.esActivo = 0;
-           }
+          
            return Retorno;
        }
 
@@ -76,14 +69,17 @@ namespace BLL
 
        public bool BuscarId(string Nombre)
        {
+           Boolean paso = false;
            DataTable Datos = new DataTable();
            Datos = conexion.BuscarDb("Select * from Nombre = '" + Nombre + "'");
+
            if (Datos.Rows.Count > 0)
            {
                this.IdUsuario = (int)Datos.Rows[0]["IdUsuario"];
-               return true;
+               paso= true;
            }
-           return false;
+
+           return paso;
        }
 
        public DataTable Autenticar(string pUserName, string pPassword)
