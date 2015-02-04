@@ -18,15 +18,13 @@ namespace DAL
         //    get { return WebConfigurationManager.AppSettings["ConexionString"]; }
         //}
 
-       public static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\REstudiante.mdf;Integrated Security=True");
-       
+       public static SqlConnection con = new SqlConnection("Data Source=MIGUEL\\SQLEXPRESS; Initial Catalog=TeacherControl3; Integrated security=true;");
        public string ultimoError;
 
        public string UltimoError
        {
            get {return ultimoError;}
        }
-      
        public bool EjecutarDB(string Codigo)
         {
             bool mensaje = false;
@@ -85,6 +83,67 @@ namespace DAL
             }
             return dt;
         }
+
+        public Object ObtenerScalar(string SQL)
+        {
+            Object Obj = new Object();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = SQL;
+                Obj = cmd.ExecuteScalar();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return Obj;
+        }
+
+        public SqlDataReader Buscar_BD_Reader(String SQL)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader Reader;
+            try
+            {
+                con.Open();
+                cmd.CommandText = SQL;
+                cmd.Connection = con;
+                Reader = cmd.ExecuteReader();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                //con.Close();// cerramos la cenexion, mentira debe quedar abierta hasta que se terminen los datos.
+            }
+            return Reader;
+        }
+
+        public bool TerminarConexion()
+        {
+            bool retorno = false;
+            try
+            {
+                con.Close();
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
+
 
         }
 }
