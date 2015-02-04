@@ -41,7 +41,12 @@ namespace BLL
 
         }
 
-        public bool Eliminar(int prmIdEvaluacion)
+
+
+
+
+
+         public bool Eliminar(int prmIdEvaluacion)
         {
             return Conexion.EjecutarDB("Delete from EvaluacionesTareas where IdCalificacion = " + prmIdEvaluacion);
         }
@@ -61,7 +66,7 @@ namespace BLL
                 this.Fecha = (DateTime)Datos.Rows[0]["Fecha"];
                 this.IdEstudiante = (int)Datos.Rows[0]["IdEstudiante"];
                 this.Calificacion = (int)Datos.Rows[0]["Calificacion"];
-
+                
             }
 
 
@@ -72,7 +77,7 @@ namespace BLL
         {
             return Conexion.BuscarDb("Select * from EvaluacionesTareas Where " + FiltroWhere);
         }
-
+    
 
 
     }
