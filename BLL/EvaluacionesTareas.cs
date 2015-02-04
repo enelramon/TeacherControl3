@@ -9,7 +9,7 @@ using BLL;
 
 namespace BLL
 {
-    class EvaluacionesTareas
+    public class EvaluacionesTareas
     {
         public int IdEstudiante { get; set; }
         public int IdEvaluacion { get; set; }
@@ -19,6 +19,15 @@ namespace BLL
 
         ConexionDb Conexion = new ConexionDb();
 
+        public  EvaluacionesTareas()
+        {
+            IdEstudiante = 0;
+            IdEvaluacion = 0;
+            Calificacion = 0;
+            IdTarea = 0;
+            Fecha = System.DateTime.Now;
+        }
+
         public bool Insertar()
         {
             return Conexion.EjecutarDB("insert into EvaluacionesTareas(Fecha,IdEstudiante,Calificacion)values ('" + Fecha.ToString("MM/dd/yyyy HH:mm:ss") + "' , " + IdEstudiante + "," + Calificacion + ")");
@@ -27,18 +36,12 @@ namespace BLL
 
         public bool Modificar()
         {
-
-            return Conexion.EjecuctarDB( " Update EvaluacionesTareas set Fecha = '" + Fecha.ToString("MM/dd/yyyy HH:mm:ss") + "', IdEstudiante=" + IdEstudiante + ", Calificacion=" + Calificacion + ", IdEvaluacion= " + IdEvaluacion);
-
+            //todo: cree dos evaluaciones de tareas y mofique la segunda. digame que pasa con la primera.
+            return Conexion.EjecuctarDB(" Update EvaluacionesTareas set Fecha = '" + Fecha.ToString("MM/dd/yyyy HH:mm:ss") + "', IdEstudiante=" + IdEstudiante + ", Calificacion=" + Calificacion + ", IdEvaluacion= " + IdEvaluacion);
 
         }
 
-
-
-
-
-
-         public bool Eliminar(int prmIdEvaluacion)
+        public bool Eliminar(int prmIdEvaluacion)
         {
             return Conexion.EjecutarDB("Delete from EvaluacionesTareas where IdCalificacion = " + prmIdEvaluacion);
         }
@@ -58,7 +61,7 @@ namespace BLL
                 this.Fecha = (DateTime)Datos.Rows[0]["Fecha"];
                 this.IdEstudiante = (int)Datos.Rows[0]["IdEstudiante"];
                 this.Calificacion = (int)Datos.Rows[0]["Calificacion"];
-                
+
             }
 
 
@@ -69,7 +72,7 @@ namespace BLL
         {
             return Conexion.BuscarDb("Select * from EvaluacionesTareas Where " + FiltroWhere);
         }
-    
+
 
 
     }

@@ -14,9 +14,9 @@ namespace BLL
         public int Codigo { get; set; }
         public string Nombre { get; set; }
         public int Creditos { get; set; }
-        public BitConverter esActivo {get;set;}
+        public Boolean esActivo { get; set; }
 
-        public Asignaturas(int Codigo, string Nombre, int Creditos, BitConverter esActivo)
+        public Asignaturas(int Codigo, string Nombre, int Creditos, Boolean esActivo)
         {
             this.Codigo = Codigo;
             this.Nombre = Nombre;
@@ -52,7 +52,7 @@ namespace BLL
 
          public bool Modificar(int IdAsignatura)
          {
-             return conexiondb.EjecutarDB("Update from Asignaturas set Nombre = '" + Nombre + "', Creditos = '" + Creditos + "', Codigo ='" + Codigo + "', esActvo ='" + esActivo +  "' where Asignaturas= " + IdAsignatura);
+             return conexiondb.EjecutarDB("Update from Asignaturas set Nombre = '" + Nombre + "', Creditos = '" + Creditos + "', Codigo ='" + Codigo + "', esActvo ='" + esActivo + "' where IdAsignatura= " + IdAsignatura);
          }
 
          public bool Buscar(int IdAsignatura)
@@ -67,9 +67,7 @@ namespace BLL
                  this.Creditos = (int)dt.Rows[0]["Creditos"];
                  this.Codigo= (int)dt.Rows[0]["Codigo"];
                
-
-
-             }
+               }
              return mensaje;
          }
 
