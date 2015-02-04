@@ -61,6 +61,7 @@
     <Content Include="Css\styles.css" />
     <Content Include="Imagenes\image.jpg" />
     <Content Include="Registros\Mejoras Pendientes.txt" />
+    <Content Include="Registros\RegistroAsignatura.aspx" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
@@ -78,6 +79,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registros\EvaluacionesTareas.cs" />
     <Compile Include="Registros\EvaluacionTareas.cs" />
+    <Compile Include="Registros\RegistroAsignatura.aspx.cs">
+      <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroAsignatura.aspx.designer.cs">
+      <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegistroEstudiantes.aspx.cs">
       <DependentUpon>RegistroEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

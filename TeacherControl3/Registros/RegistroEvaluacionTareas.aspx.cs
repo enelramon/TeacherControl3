@@ -95,6 +95,11 @@ namespace TeacherControl3.Registros
             //MensajeLabel.Text = "Evaluacion con el Id " + IdEvaluacion + " fue Eliminado";
         }
 
+        protected void EliminarButton_Click1(object sender, EventArgs e)
+        {
+
+        }
+
 
 
        

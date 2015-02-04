@@ -10,115 +10,88 @@
 namespace TeacherControl3.Registros {
     
     
-    public partial class RegistroEvaluacionTareas {
+    public partial class RegistroEstudiantes {
         
         /// <summary>
-        /// Label1 control.
+        /// IdAsignatura control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label IdAsignatura;
         
         /// <summary>
-        /// IdEvaluacionTextBox control.
+        /// IdAsignaturaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdEvaluacionTextBox;
+        protected global::System.Web.UI.WebControls.TextBox IdAsignaturaTextBox;
         
         /// <summary>
-        /// Label2 control.
+        /// CodigoLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label CodigoLabel;
         
         /// <summary>
-        /// IdEstudianteTextBox control.
+        /// CodigoTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdEstudianteTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CodigoTextBox;
         
         /// <summary>
-        /// Label4 control.
+        /// NombreLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label NombreLabel;
         
         /// <summary>
-        /// CalificacionTextBox control.
+        /// NombreTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CalificacionTextBox;
+        protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
         
         /// <summary>
-        /// Label6 control.
+        /// CreditosLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label CreditosLabel;
         
         /// <summary>
-        /// IdTareaTextBox control.
+        /// CreditosTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdTareaTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CreditosTextBox;
         
         /// <summary>
-        /// Label5 control.
+        /// NuevoButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// FechaTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FechaTextBox;
-        
-        /// <summary>
-        /// BuscarButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BuscarButton;
-        
-        /// <summary>
-        /// GuardarButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarButton;
+        protected global::System.Web.UI.WebControls.Button NuevoButton;
         
         /// <summary>
         /// EliminarButton control.
@@ -130,12 +103,12 @@ namespace TeacherControl3.Registros {
         protected global::System.Web.UI.WebControls.Button EliminarButton;
         
         /// <summary>
-        /// NuevoButton control.
+        /// GuardarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button NuevoButton;
+        protected global::System.Web.UI.WebControls.Button GuardarButton;
     }
 }
