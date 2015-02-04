@@ -34,10 +34,6 @@ namespace BLL
         }
 
 
-
-
-
-
          public bool Eliminar(int prmIdEvaluacion)
         {
             return Conexion.EjecutarDB("Delete from EvaluacionesTareas where IdCalificacion = " + prmIdEvaluacion);

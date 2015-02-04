@@ -64,6 +64,7 @@
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
+    <Content Include="Registros\RegistroUsuarios.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.designer.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RegistroUsuarios.aspx.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroUsuarios.aspx.designer.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
