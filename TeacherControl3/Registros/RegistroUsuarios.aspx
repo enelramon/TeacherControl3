@@ -14,13 +14,13 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2">
-                <asp:Label ID="RuLabel" runat="server" Text="Registro de Usuario"></asp:Label>
+                <asp:Label ID="RuLabel" runat="server" Text="Registro de Usuario" Font-Bold="True" Font-Size="Medium" Font-Underline="False" ForeColor="Blue"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Label ID="IdUsuarioLabel" runat="server" Text="IdUsuario"></asp:Label>
+                <asp:Label ID="IdUsuarioLabel" runat="server" Text="IdUsuario" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
                 <asp:TextBox ID="IdTextBox" runat="server"></asp:TextBox>
@@ -28,7 +28,7 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Label ID="NombreLabel" runat="server" Text="Nombre"></asp:Label>
+                <asp:Label ID="NombreLabel" runat="server" Text="Nombre" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
                 <asp:TextBox ID="NombreTextBox" runat="server"></asp:TextBox>
@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Label ID="ClaveLabel" runat="server" Text="Clave"></asp:Label>
+                <asp:Label ID="ClaveLabel" runat="server" Text="Clave" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
                 <asp:TextBox ID="ClaveTextBox" runat="server"></asp:TextBox>
@@ -44,7 +44,7 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Label ID="EmailLabel" runat="server" Text="Email"></asp:Label>
+                <asp:Label ID="EmailLabel" runat="server" Text="Email" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
                 <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
@@ -52,7 +52,7 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Label ID="esActivoLabel" runat="server" Text="esActivo"></asp:Label>
+                <asp:Label ID="esActivoLabel" runat="server" Text="esActivo" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
                 <asp:TextBox ID="ActivoTextBox" runat="server"></asp:TextBox>

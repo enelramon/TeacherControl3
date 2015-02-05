@@ -56,14 +56,7 @@ namespace BLL
                this.Email = (string)Datos.Rows[0]["Email"];
                this.esActivo = (int)Datos.Rows[0]["esActivo"];
            }
-           else
-           {
-               this.IdUsuario = 0;
-               this.Nombre = "";
-               this.Clave = "";
-               this.Email = "";
-               this.esActivo = 0;
-           }
+          
            return Retorno;
        }
 

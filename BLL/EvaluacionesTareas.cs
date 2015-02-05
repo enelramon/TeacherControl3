@@ -9,7 +9,7 @@ using BLL;
 
 namespace BLL
 {
-    class EvaluacionesTareas
+   public class EvaluacionesTareas
     {
         public int IdEstudiante { get; set; }
         public int IdEvaluacion { get; set; }

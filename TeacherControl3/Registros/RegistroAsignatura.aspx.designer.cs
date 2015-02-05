@@ -10,7 +10,7 @@
 namespace TeacherControl3.Registros {
     
     
-    public partial class RegistroEstudiantes {
+    public partial class RegistroAsignatura {
         
         /// <summary>
         /// IdAsignatura control.
