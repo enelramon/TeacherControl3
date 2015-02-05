@@ -1,56 +1,39 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="TeacherControl3.LogIn" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="TeacherControl3.LogIn" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 129px;
-        }
-        .auto-style2 {
-            width: 319px;
-        }
-        .auto-style3 {
-            width: 384px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-        <table style="width: 36%;">
+ 
+        <table style="width:100%;">
             <tr>
-                <td class="auto-style1">
-                    <asp:Label ID="UsuarioLabel" runat="server" Text="Usuario"></asp:Label>
-                </td>
-                <td class="auto-style2">
+                <td>Usuario</td>
+                <td>
                     <asp:TextBox ID="UsuarioTextBox" runat="server"></asp:TextBox>
                 </td>
-                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style1">
-                    <asp:Label ID="ClaveLabel" runat="server" Text="Clave"></asp:Label>
-                </td>
-                <td class="auto-style2">
+                <td>Clave</td>
+                <td style="font-weight: 700">
                     <asp:TextBox ID="ClaveTextBox" runat="server"></asp:TextBox>
                 </td>
-                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style2">
-                    <asp:Button ID="AceptarButton" runat="server" Text="Aceptar" />
+                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="EntrarButton" runat="server" Text="Entrar" OnClick="EntrarButton_Click" />
+                &nbsp;
                     <asp:Button ID="CancelarButton" runat="server" Text="Cancelar" />
                 </td>
-                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="ErrorLabel" runat="server" ForeColor="Red"></asp:Label>
+                </td>
+                <td>&nbsp;</td>
             </tr>
         </table>
-    
-    </div>
-    </form>
-</body>
-</html>
+ </asp:Content>

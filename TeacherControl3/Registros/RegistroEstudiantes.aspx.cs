@@ -15,20 +15,20 @@ namespace TeacherControl3.Registros
 
         }
 
-       
+
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
- Estudiantes r = new Estudiantes();
-            int IdRegistro = 0;
-            int.TryParse(IdRegistroTextBox.Text, out IdRegistro);
+            Estudiantes r = new Estudiantes();
+            //int IdRegistro = 0;
+            //int.TryParse(IdRegistroTextBox.Text, out IdRegistro);
 
-            r.Nombres = NombresTextBox.Text;
-            r.Apellidos = ApellidosTextBox.Text;
-            r.Telefono = TelefonoTextBox.Text;
-            r.Celular = CelularTextBox.Text;
-            r.Direccion = DireccionTextBox.Text;
-            r.Email = EmailTextBox.Text;
+            //r.Nombres = NombresTextBox.Text;
+            //r.Apellidos = ApellidosTextBox.Text;
+            //r.Telefono = TelefonoTextBox.Text;
+            //r.Celular = CelularTextBox.Text;
+            //r.Direccion = DireccionTextBox.Text;
+            //r.Email = EmailTextBox.Text;
             // r.Fecha = FechaTextBox.Text; 
 
 
@@ -48,14 +48,14 @@ namespace TeacherControl3.Registros
 
         public void LimpiarCampos()
         {
-            this.IdRegistroTextBox.Text = "";
-            this.NombresTextBox.Text = "";
-            this.FechaTextBox.Text = "";
-            this.ApellidosTextBox.Text = "";
-            this.TelefonoTextBox.Text = "";
-            this.CelularTextBox.Text = "";
-            this.DireccionTextBox.Text = "";
-            this.EmailTextBox.Text = "";
+            //this.IdRegistroTextBox.Text = "";
+            //this.NombresTextBox.Text = "";
+            //this.FechaTextBox.Text = "";
+            //this.ApellidosTextBox.Text = "";
+            //this.TelefonoTextBox.Text = "";
+            //this.CelularTextBox.Text = "";
+            //this.DireccionTextBox.Text = "";
+            //this.EmailTextBox.Text = "";
         }
         protected void DeleteButton_Click(object sender, EventArgs e)
         {

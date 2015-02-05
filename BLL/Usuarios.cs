@@ -19,6 +19,11 @@ namespace BLL
 
        public ConexionDb conexion = new ConexionDb();
 
+        public Usuarios()
+        {
+            this.IdUsuario = 0;
+        }
+
        public bool Insertar()
        {
            bool accion = false;
@@ -26,7 +31,7 @@ namespace BLL
            return accion;
        }
        
-       public bool Modificar ()
+        public bool Modificar()
        {
            bool accion = false;
            accion = conexion.EjecutarDB("Update Usuarios set Nombre = '" + Nombre + "', Clave = '" + Clave + "', Email = '" + Email + "', esActivo = '" + esActivo + "' Where IdUsuario = " + IdUsuario.ToString());
@@ -56,7 +61,7 @@ namespace BLL
                this.Email = (string)Datos.Rows[0]["Email"];
                this.esActivo = (int)Datos.Rows[0]["esActivo"];
            }
-          
+
            return Retorno;
        }
 
@@ -69,19 +74,30 @@ namespace BLL
 
        public bool BuscarId(string Nombre)
        {
+            Boolean paso = false;
            DataTable Datos = new DataTable();
            Datos = conexion.BuscarDb("Select * from Nombre = '" + Nombre + "'");
+
            if (Datos.Rows.Count > 0)
            {
                this.IdUsuario = (int)Datos.Rows[0]["IdUsuario"];
-               return true;
+                paso = true;
            }
-           return false;
+
+            return paso;
        }
 
-       public DataTable Autenticar(string pUserName, string pPassword)
+        public Boolean Autenticar(string pUserName, string pPassword)
+        {
+            Boolean retorno = false;
+            object idUsuario = conexion.ObtenerValorDb("SELECT IdUsuario from Usuarios Where Usuarios = '" + pUserName + "' And Clave = '" + pPassword + "'");
+
+            if (idUsuario != null)
        {
-           return conexion.BuscarDb("SELECT IdUsuario from Usuarios Where Usuarios = '" + pUserName + "' And Clave = '" + pPassword + "'");
+                retorno = this.Buscar((int)idUsuario);
+            }
+
+            return retorno;
        }
 
        public bool Eliminar(string p)
