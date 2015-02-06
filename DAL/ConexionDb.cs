@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-   public class ConexionDb
+    public class ConexionDb
     {
 
         //public string ConexionString
@@ -18,16 +18,16 @@ namespace DAL
         //    get { return WebConfigurationManager.AppSettings["ConexionString"]; }
         //}
 
-       public static SqlConnection con = new SqlConnection("Data Source = EDWARDSHOES\\SQLEXPRESS; Initial Catalog= TeacherControlDb3; Integrated Security=True");
-       
-       public string ultimoError;
+        public static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\REstudiante.mdf;Integrated Security=True");
 
-       public string UltimoError
-       {
-           get {return ultimoError;}
-       }
-      
-       public bool EjecutarDB(string Codigo)
+        public string ultimoError;
+
+        public string UltimoError
+        {
+            get { return ultimoError; }
+        }
+
+        public bool EjecutarDB(string Codigo)
         {
             bool mensaje = false;
             SqlCommand cmd = new SqlCommand();
@@ -45,7 +45,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                
+
                 throw;
             }
             finally
@@ -86,6 +86,28 @@ namespace DAL
             return dt;
         }
 
+        public Object ObtenerValorDb(string escalar)
+        {
+            SqlCommand com = new SqlCommand(escalar, con);
+            Object objeto;
+
+            try
+            {
+                con.Open();
+                objeto = com.ExecuteScalar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return objeto;
+        }
 
         public bool EjecuctarDB(string p)
         {
