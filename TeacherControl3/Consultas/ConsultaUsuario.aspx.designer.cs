@@ -31,13 +31,13 @@ namespace TeacherControl3.Consultas {
         protected global::System.Web.UI.WebControls.Label BuscarLabel;
         
         /// <summary>
-        /// BuscarListBox control.
+        /// BuscarDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox BuscarListBox;
+        protected global::System.Web.UI.WebControls.DropDownList BuscarDropDownList;
         
         /// <summary>
         /// BuscarTextBox control.
@@ -58,12 +58,12 @@ namespace TeacherControl3.Consultas {
         protected global::System.Web.UI.WebControls.Button BuscarButton;
         
         /// <summary>
-        /// GridView1 control.
+        /// BuscarGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView BuscarGridView;
     }
 }

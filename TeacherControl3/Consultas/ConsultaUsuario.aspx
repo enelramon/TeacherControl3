@@ -13,23 +13,23 @@
                 <asp:Label ID="BuscarLabel" runat="server" ForeColor="Black" Text="Buscar:"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:ListBox ID="BuscarListBox" runat="server" Height="25px" OnSelectedIndexChanged="BuscarListBox_SelectedIndexChanged">
+                <asp:DropDownList ID="BuscarDropDownList" runat="server">
                     <asp:ListItem>Id</asp:ListItem>
                     <asp:ListItem>Nombre</asp:ListItem>
-                </asp:ListBox>
+                </asp:DropDownList>
             </td>
             <td class="auto-style3">
                 <asp:TextBox ID="BuscarTextBox" runat="server" Width="181px"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="BuscarButton" runat="server" Text="Buscar" />
+                <asp:Button ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
             </td>
         </tr>
         <tr>
             <td class="auto-style1" colspan="4">
-                <asp:GridView ID="GridView1" runat="server">
+                <asp:GridView ID="BuscarGridView" runat="server">
                     <Columns>
-                        <asp:HyperLinkField DataNavigateUrlFields="IdUsuario" Text="Edit" />
+                        <asp:HyperLinkField DataNavigateUrlFields="IdUsuario" Text="Edit" DataNavigateUrlFormatString="RegistroUsuarios.aspx?IdUsuario = {0}" />
                     </Columns>
                 </asp:GridView>
             </td>
