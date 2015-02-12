@@ -82,6 +82,13 @@
     <Compile Include="Consultas\ConsultaAsitencia.aspx.designer.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\cSemestres.aspx.cs">
+      <DependentUpon>cSemestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cSemestres.aspx.designer.cs">
+      <DependentUpon>cSemestres.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registros\RegistroAsignatura.aspx.cs">
       <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
@@ -117,6 +124,13 @@
     </Compile>
     <Compile Include="Registros\RegistroUsuarios.aspx.designer.cs">
       <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rSemestres.aspx.cs">
+      <DependentUpon>rSemestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rSemestres.aspx.designer.cs">
+      <DependentUpon>rSemestres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
