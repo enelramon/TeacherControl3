@@ -98,6 +98,11 @@ namespace TeacherControl3.Registros
 
         }
 
+        protected void VerEstudianteButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Registros/RegistroEstudiantes.aspx?IdEstudiante=" + IdEstudianteTextBox.Text);
+        }
+
 
 
        

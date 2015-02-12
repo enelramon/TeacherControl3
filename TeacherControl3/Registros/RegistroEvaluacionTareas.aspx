@@ -32,6 +32,7 @@
                 <asp:Label ID="Label2" runat="server" Text="IdEstudiante"></asp:Label>
             </td>
             <td class="auto-style4">
+                <asp:Button ID="VerEstudianteButton" runat="server" OnClick="VerEstudianteButton_Click" Text="Ver Estudiante" />
                 <asp:TextBox ID="IdEstudianteTextBox" runat="server" Height="29px" Width="427px"></asp:TextBox>
             </td>
         </tr>
