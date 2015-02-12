@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TeacherControl3.Site" %>
-
+<%@ Import Namespace="System.Web.Security" %>
 <!--
 spigot, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
 
@@ -22,6 +22,8 @@ License: Creative Commons Attribution
         <header>
             <h1><a href="/">Teacher Control<span> 3 </span></a></h1>
             <h2>Portal web de gestion de estudiantes de Aplicada I y II</h2>
+
+
         </header>
 
         <nav>
@@ -42,6 +44,10 @@ License: Creative Commons Attribution
                 <article>
 
                     <form id="form1" runat="server">
+<%--                                    Welcome <b><%=User.Identity.Name%></b>. Not <b><%=User.Identity.Name%></b>? 
+Click <asp:LinkButton id="LoginLink" Text="here"                       OnClick="LoginLink_OnClick" runat="server" />
+to sign in.--%>
+
                         <div>
                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                             </asp:ContentPlaceHolder>

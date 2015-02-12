@@ -18,7 +18,8 @@ namespace DAL
         //    get { return WebConfigurationManager.AppSettings["ConexionString"]; }
         //}
 
-        public static SqlConnection con = new SqlConnection("Data Source=MIGUEL\\SQLEXPRESS; Initial Catalog=TeacherControl3; Integrated security=true;");
+        public static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\REstudiante.mdf;Integrated Security=True");
+
         public string ultimoError;
 
         public string UltimoError
@@ -85,8 +86,30 @@ namespace DAL
             return dt;
         }
 
+        public Object ObtenerValorDb(string escalar)
+        {
+            SqlCommand com = new SqlCommand(escalar, con);
+            Object objeto;
 
-        public int ObtenerScalar(string p)
+            try
+            {
+                con.Open();
+                objeto = com.ExecuteScalar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return objeto;
+        }
+
+        public bool EjecuctarDB(string p)
         {
             throw new NotImplementedException();
         }
