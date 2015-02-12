@@ -15,7 +15,6 @@ namespace BLL
         public string Nombre { get; set; }
         public int Creditos { get; set; }
         public Boolean esActivo {get;set;}
-        public Boolean esActivo { get; set; }
 
         public Asignaturas(int Codigo, string Nombre, int Creditos, Boolean esActivo)
         {
@@ -32,7 +31,7 @@ namespace BLL
             this.Nombre = "";
             this.Creditos = 0;
             this.Codigo = 0;
-            this.esActivo = "";
+           // this.esActivo = "";
         }
 
          ConexionDb conexiondb = new ConexionDb();
