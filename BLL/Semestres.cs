@@ -30,7 +30,7 @@ namespace BLL
 
             if (paso)
             {
-                IdSemestre = (int)conexion.ObtenerScalar("Select Max(IdSemestre) from Semestres");
+                IdSemestre = (int)conexion.ObtenerValorDb("Select Max(IdSemestre) from Semestres");
             }
             return paso;
         }

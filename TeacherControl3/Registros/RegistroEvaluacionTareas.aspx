@@ -53,6 +53,13 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style2" style="font-family: 'Arial Rounded MT Bold'">
+                &nbsp;</td>
+            <td class="auto-style3">
+                <asp:TextBox ID="IdTareaTextBox0" runat="server" Height="103px" Width="356px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style1" style="font-family: 'Arial Rounded MT Bold'">
                 <asp:Label ID="Label5" runat="server" Text="Fecha"></asp:Label>
             </td>
