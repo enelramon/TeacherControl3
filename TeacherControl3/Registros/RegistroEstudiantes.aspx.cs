@@ -10,8 +10,23 @@ namespace TeacherControl3.Registros
 {
     public partial class RegistroEstudiantes : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                int IdEstudiante = 0;
+
+                Session["Modificando"] = false;
+                if (Request.QueryString["IdEstudiante"] != null)
+                {
+                    IdEstudiante = Convert.ToInt32(Request.QueryString["IdEstudiante"]);
+                    Session["Modificando"] = true;
+                }
+
+
+
+            }
 
         }
 

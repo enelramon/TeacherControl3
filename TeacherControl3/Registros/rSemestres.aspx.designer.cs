@@ -10,196 +10,142 @@
 namespace TeacherControl3.Registros {
     
     
-    public partial class RegistroEstudiantes {
+    public partial class rSemestres {
         
         /// <summary>
-        /// IdLabel control.
+        /// CodigoLabel0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IdLabel;
+        protected global::System.Web.UI.WebControls.Label CodigoLabel0;
         
         /// <summary>
-        /// IdRegistroTextBox control.
+        /// IdSemestreTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdRegistroTextBox;
+        protected global::System.Web.UI.WebControls.TextBox IdSemestreTextBox;
         
         /// <summary>
-        /// Nombreslabel control.
+        /// CodigoLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Nombreslabel;
+        protected global::System.Web.UI.WebControls.Label CodigoLabel;
         
         /// <summary>
-        /// NombresTextBox control.
+        /// CodigoTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NombresTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CodigoTextBox;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// FechaInicio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Label FechaInicio;
         
         /// <summary>
-        /// ApellidosLabel control.
+        /// FechaInicioTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ApellidosLabel;
+        protected global::System.Web.UI.WebControls.TextBox FechaInicioTextBox;
         
         /// <summary>
-        /// ApellidosTextBox control.
+        /// FechaFin0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ApellidosTextBox;
+        protected global::System.Web.UI.WebControls.Label FechaFin0;
         
         /// <summary>
-        /// ApellidosValidator control.
+        /// FechaFinTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ApellidosValidator;
+        protected global::System.Web.UI.WebControls.TextBox FechaFinTextBox;
         
         /// <summary>
-        /// TelefonoLabel control.
+        /// FechaParcial1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TelefonoLabel;
+        protected global::System.Web.UI.WebControls.Label FechaParcial1;
         
         /// <summary>
-        /// TelefonoTextBox control.
+        /// FechaParcial1TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TelefonoTextBox;
+        protected global::System.Web.UI.WebControls.TextBox FechaParcial1TextBox;
         
         /// <summary>
-        /// TelefonoValidator control.
+        /// FechaParcial2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator TelefonoValidator;
+        protected global::System.Web.UI.WebControls.Label FechaParcial2;
         
         /// <summary>
-        /// CelularLabel control.
+        /// FechaParcial2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CelularLabel;
+        protected global::System.Web.UI.WebControls.TextBox FechaParcial2TextBox;
         
         /// <summary>
-        /// CelularTextBox control.
+        /// FechaFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CelularTextBox;
+        protected global::System.Web.UI.WebControls.Label FechaFinal;
         
         /// <summary>
-        /// CelularValidator control.
+        /// FechaFinalTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator CelularValidator;
+        protected global::System.Web.UI.WebControls.TextBox FechaFinalTextBox;
         
         /// <summary>
-        /// FechaLabel control.
+        /// esActivoCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FechaLabel;
-        
-        /// <summary>
-        /// FechaTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FechaTextBox;
-        
-        /// <summary>
-        /// DireccionLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DireccionLabel;
-        
-        /// <summary>
-        /// DireccionTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DireccionTextBox;
-        
-        /// <summary>
-        /// EmailLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EmailLabel;
-        
-        /// <summary>
-        /// EmailTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
-        
-        /// <summary>
-        /// EmailValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailValidator;
+        protected global::System.Web.UI.WebControls.CheckBox esActivoCheckBox;
         
         /// <summary>
         /// ClearButton control.
@@ -218,14 +164,5 @@ namespace TeacherControl3.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SaveButton;
-        
-        /// <summary>
-        /// DeleteButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteButton;
     }
 }

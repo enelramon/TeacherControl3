@@ -22,15 +22,6 @@ namespace TeacherControl3 {
         protected global::System.Web.UI.WebControls.Label RuLabel;
         
         /// <summary>
-        /// IdUsuarioLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IdUsuarioLabel;
-        
-        /// <summary>
         /// IdTextBox control.
         /// </summary>
         /// <remarks>
@@ -38,15 +29,6 @@ namespace TeacherControl3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
-        
-        /// <summary>
-        /// NombreLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NombreLabel;
         
         /// <summary>
         /// NombreTextBox control.
@@ -58,15 +40,6 @@ namespace TeacherControl3 {
         protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
         
         /// <summary>
-        /// ClaveLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ClaveLabel;
-        
-        /// <summary>
         /// ClaveTextBox control.
         /// </summary>
         /// <remarks>
@@ -76,15 +49,6 @@ namespace TeacherControl3 {
         protected global::System.Web.UI.WebControls.TextBox ClaveTextBox;
         
         /// <summary>
-        /// EmailLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EmailLabel;
-        
-        /// <summary>
         /// EmailTextBox control.
         /// </summary>
         /// <remarks>
@@ -92,15 +56,6 @@ namespace TeacherControl3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
-        
-        /// <summary>
-        /// esActivoLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label esActivoLabel;
         
         /// <summary>
         /// ActivoTextBox control.
