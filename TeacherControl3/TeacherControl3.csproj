@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consultas\ConsultaEvaluacion.aspx" />
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Consultas\cSemestres.aspx" />
     <Content Include="Css\styles.css" />
@@ -75,6 +76,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaEvaluacion.aspx.cs">
+      <DependentUpon>ConsultaEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaEvaluacion.aspx.designer.cs">
+      <DependentUpon>ConsultaEvaluacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaAsitencia.aspx.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
