@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-   public class ConexionDb
+    public class ConexionDb
     {
 
         //public string ConexionString
@@ -18,14 +18,15 @@ namespace DAL
         //    get { return WebConfigurationManager.AppSettings["ConexionString"]; }
         //}
 
-       public static SqlConnection con = new SqlConnection("Data Source=MIGUEL\\SQLEXPRESS; Initial Catalog=TeacherControl3; Integrated security=true;");
-       public string ultimoError;
+        public static SqlConnection con = new SqlConnection("Data Source=MIGUEL\\SQLEXPRESS; Initial Catalog=TeacherControl3; Integrated security=true;");
+        public string ultimoError;
 
-       public string UltimoError
-       {
-           get {return ultimoError;}
-       }
-       public bool EjecutarDB(string Codigo)
+        public string UltimoError
+        {
+            get { return ultimoError; }
+        }
+
+        public bool EjecutarDB(string Codigo)
         {
             bool mensaje = false;
             SqlCommand cmd = new SqlCommand();
@@ -43,7 +44,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                
+
                 throw;
             }
             finally
@@ -84,66 +85,10 @@ namespace DAL
             return dt;
         }
 
-        public Object ObtenerScalar(string SQL)
+
+        public int ObtenerScalar(string p)
         {
-            Object Obj = new Object();
-            SqlCommand cmd = new SqlCommand();
-            try
-            {
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = SQL;
-                Obj = cmd.ExecuteScalar();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                con.Close();
-            }
-            return Obj;
+            throw new NotImplementedException();
         }
-
-        public SqlDataReader Buscar_BD_Reader(String SQL)
-        {
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader Reader;
-            try
-            {
-                con.Open();
-                cmd.CommandText = SQL;
-                cmd.Connection = con;
-                Reader = cmd.ExecuteReader();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                //con.Close();// cerramos la cenexion, mentira debe quedar abierta hasta que se terminen los datos.
-            }
-            return Reader;
-        }
-
-        public bool TerminarConexion()
-        {
-            bool retorno = false;
-            try
-            {
-                con.Close();
-                retorno = true;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return retorno;
-        }
-
-
-
-        }
+    }
 }

@@ -16,11 +16,11 @@ namespace TeacherControl3.Registros
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString ["IdSemestre"]!=null)
+                if (Request.QueryString["IdSemestre"] != null)
                 {
                     ClearButton.Visible = true;
                     SaveButton.Visible = true;
-               
+
                     IdSemestreTextBox.Visible = true;
 
                     IdSemestreTextBox.Text = Request.QueryString["IdSemestre"];
@@ -76,7 +76,7 @@ namespace TeacherControl3.Registros
         }
 
 
-      
+
 
 
 
@@ -90,9 +90,6 @@ namespace TeacherControl3.Registros
             Limpiar();
         }
 
-        
-
-    
 
     }
 

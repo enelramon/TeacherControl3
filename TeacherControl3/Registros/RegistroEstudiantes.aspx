@@ -29,7 +29,7 @@
                 <asp:Label ID="ApellidosLabel" runat="server" Text="Apellidos"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:TextBox ID="ApellidosTextBox" runat="server" Width="152px" BackColor="White"></asp:TextBox>
+                <asp:TextBox ID="ApellidosTextBox" runat="server" Width="152px" BackColor="White" OnTextChanged="ApellidosTextBox_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="ApellidosValidator" runat="server" ControlToValidate="ApellidosTextBox" ErrorMessage="RequiredFieldValidator" ForeColor="Red">El campo &quot; Apellidos &quot; no puede estar vacio.</asp:RequiredFieldValidator>
             </td>
         </tr>

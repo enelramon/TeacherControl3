@@ -62,8 +62,11 @@
     <Content Include="Css\styles.css" />
     <Content Include="Imagenes\image.jpg" />
     <Content Include="Registros\Mejoras Pendientes.txt" />
+    <Content Include="Registros\RegistroAsignatura.aspx" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
+    <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
+    <Content Include="Registros\RegistroUsuarios.aspx" />
     <Content Include="Registros\rSemestres.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
@@ -84,6 +87,15 @@
       <DependentUpon>cSemestres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\EvaluacionesTareas.cs" />
+    <Compile Include="Registros\EvaluacionTareas.cs" />
+    <Compile Include="Registros\RegistroAsignatura.aspx.cs">
+      <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroAsignatura.aspx.designer.cs">
+      <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegistroEstudiantes.aspx.cs">
       <DependentUpon>RegistroEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -91,12 +103,26 @@
     <Compile Include="Registros\RegistroEstudiantes.aspx.designer.cs">
       <DependentUpon>RegistroEstudiantes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\RegistroEvaluacionTareas.aspx.cs">
+      <DependentUpon>RegistroEvaluacionTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroEvaluacionTareas.aspx.designer.cs">
+      <DependentUpon>RegistroEvaluacionTareas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.designer.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RegistroUsuarios.aspx.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroUsuarios.aspx.designer.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rSemestres.aspx.cs">
       <DependentUpon>rSemestres.aspx</DependentUpon>

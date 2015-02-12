@@ -27,30 +27,30 @@ namespace BLL
             bool paso = false;
             paso = conexion.EjecutarDB("Insert into Semestres (Codigo, FechaInicio, FechaFin, FechaParcial1, FechaParcial2, FechaFinal, esActivo) Values ('" + Codigo + "', '" + FechaInicio.ToString("MM/dd/yyyy") + "', '" + FechaFin.ToString("MM/dd/yyyy") + "', '" + FechaParcial1.ToString("MM/dd/yyyy") +
                 "','" + FechaParcial2.ToString("MM/dd/yyyy") + "', '" + FechaFinal.ToString("MM/dd/yyyy") + "' , '" + esActivo + "' )");
-        
+
             if (paso)
             {
-                IdSemestre =(int) conexion.ObtenerScalar("Select Max(IdSemestre) from Semestres");
+                IdSemestre = (int)conexion.ObtenerScalar("Select Max(IdSemestre) from Semestres");
             }
-          return paso;
+            return paso;
         }
 
         public bool Eliminar()
         {
-            return conexion.EjecutarDB("Delete From Semestres Where IdSemestre = " + IdSemestre ); 
+            return conexion.EjecutarDB("Delete From Semestres Where IdSemestre = " + IdSemestre);
         }
 
         public bool Modificar()
         {
-            return conexion.EjecutarDB("Update Semestres set Codigo = " + Codigo + "', FechaInicio ='" + FechaInicio.ToString("dd/MM//yyyy") + "', FechaInicio ='" + FechaFin.ToString("dd/MM//yyyy") + "', FechaParcial1 ='" + FechaParcial1.ToString("dd/MM//yyyy") + "', FechaParcial2 ='" + FechaParcial2.ToString("dd/MM//yyyy") + "', FechaFinal ='" + FechaFinal.ToString("dd/MM//yyyy"));
+            return conexion.EjecutarDB("Update Semestres set Codigo = " + Codigo + "', FechaInicio ='" + FechaInicio.ToString("dd/MM//yyyy") + "', FechaInicio ='" + FechaFin.ToString("dd/MM//yyyy") + "', FechaParcial1 ='" + FechaParcial1.ToString("dd/MM//yyyy") + "', FechaParcial2 ='" + FechaParcial2.ToString("dd/MM//yyyy") + "', FechaFinal ='" + FechaFinal.ToString("dd/MM//yyyy") + "' where IdEstudiante= " + IdSemestre);
         }
 
 
-        public  bool Buscar()
+        public bool Buscar()
         {
             bool retorno = false;
-            dt = conexion.BuscarDb("Select * from Semestres where IdSemestre =" + IdSemestre); 
-            if (dt.Rows.Count >0 )
+            dt = conexion.BuscarDb("Select * from Semestres where IdSemestre =" + IdSemestre);
+            if (dt.Rows.Count > 0)
             {
                 retorno = true;
                 IdSemestre = (int)dt.Rows[0]["IdSemestre"];
@@ -64,14 +64,14 @@ namespace BLL
             }
             return retorno;
         }
-        public DataTable Listar (string campos, string filtro)
+        public DataTable Listar(string campos, string filtro)
         {
-            return conexion.BuscarDb("Select " + campos + "from Semestres where " + filtro);
+            return conexion.BuscarDb("Select " + campos + " from Semestres where " + filtro);
         }
 
 
 
     }
 }
- 
+
 
