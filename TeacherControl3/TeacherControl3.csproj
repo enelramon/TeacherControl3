@@ -70,7 +70,7 @@
     <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Registros\RegistroUsuarios.aspx" />
-    <Content Include="RegistroTareas.aspx" />
+    <Content Include="Registros\RegistroTareas.aspx" />
     <Content Include="Registros\rSemestres.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
@@ -89,6 +89,13 @@
     </Compile>
     <Compile Include="Consultas\ConsultaAsitencia.aspx.designer.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cSemestres.aspx.cs">
+      <DependentUpon>cSemestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cSemestres.aspx.designer.cs">
+      <DependentUpon>cSemestres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registros\RegistroAsignatura.aspx.cs">
@@ -112,6 +119,10 @@
     <Compile Include="Registros\RegistroEvaluacionTareas.aspx.designer.cs">
       <DependentUpon>RegistroEvaluacionTareas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\RegistroTareas.aspx.cs">
+      <DependentUpon>RegistroTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -125,6 +136,13 @@
     </Compile>
     <Compile Include="Registros\RegistroUsuarios.aspx.designer.cs">
       <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rSemestres.aspx.cs">
+      <DependentUpon>rSemestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rSemestres.aspx.designer.cs">
+      <DependentUpon>rSemestres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

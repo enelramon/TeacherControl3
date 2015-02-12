@@ -76,7 +76,7 @@ namespace TeacherControl3
             llenaclase();
             if (Convert.ToBoolean(Session["Modificando"]) == false)
             {
-                if (usuario.Insertar() == true)
+                if (usuario.Insertar() )
                 {
 
                     MsjLabel.ForeColor = System.Drawing.Color.Green;
