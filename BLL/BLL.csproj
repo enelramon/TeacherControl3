@@ -46,6 +46,7 @@
     <Compile Include="Tareas.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="Semestres.cs" />
+    <Compile Include="Utilitarios\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
