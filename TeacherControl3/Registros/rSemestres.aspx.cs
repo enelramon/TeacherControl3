@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using BLL.Utilitarios;
 
 namespace TeacherControl3.Registros
 {
@@ -16,15 +17,19 @@ namespace TeacherControl3.Registros
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["IdSemestre"] != null)
+                int IdSemestre = 0;
+
+                IdSemestre =Util.ObtenerEntero(Request.QueryString["IdSemestre"]);
+
+                if (IdSemestre != 0)
                 {
                     ClearButton.Visible = true;
                     SaveButton.Visible = true;
 
                     IdSemestreTextBox.Visible = true;
 
-                    IdSemestreTextBox.Text = Request.QueryString["IdSemestre"];
-                    semestres.IdSemestre = int.Parse(Request.QueryString["IdSemestre"]);
+                    IdSemestreTextBox.Text = IdSemestre.ToString();
+                   
 
                 }
 
