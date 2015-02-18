@@ -45,7 +45,7 @@
         <asp:TextBox ID="FechaFinalTextBox" runat="server" TextMode="Date" Width="159px"></asp:TextBox>
     </p>
     <p>
-        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:CheckBox ID="esActivoCheckBox" runat="server" BackColor="Silver" Font-Bold="True" ForeColor="#000099" Text="Activo" />
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:CheckBox ID="esActivoCheckBox" runat="server" BackColor="Silver" Font-Bold="True" ForeColor="#000099" Text="Activo" OnCheckedChanged="esActivoCheckBox_CheckedChanged" />
         &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="ClearButton" runat="server" OnClick="ClearButton_Click" Text="Clear" />
         <asp:Button ID="SaveButton" runat="server" OnClick="SaveButton_Click" Text="Save" />

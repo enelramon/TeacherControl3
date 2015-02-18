@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TeacherControlDb.mdf" />
+    <Content Include="App_Data\TeacherControlDb_log.ldf">
+      <DependentUpon>TeacherControlDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
     <Content Include="Consultas\cSemestres.aspx" />
@@ -112,6 +116,11 @@
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegistroAsignatura.aspx.cs">
       <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +177,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -182,7 +195,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Code\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
