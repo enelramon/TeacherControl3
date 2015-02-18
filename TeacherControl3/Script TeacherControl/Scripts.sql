@@ -13,7 +13,8 @@ CodigoTarea varchar(10) not null,
 Fecha datetime  not null,
 Vence datetime not null,
 IdSemestre int not null,
-IdAsignatura int not null
+IdAsignatura int not null,
+IdSeccion int not null,
 Descripcion varchar(200)  not null)
 
 Create Table Semestres(IdSemestre int identity(1,1) primary key NOT NULL,

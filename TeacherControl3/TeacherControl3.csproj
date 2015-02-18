@@ -57,12 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TeacherControlDb.mdf" />
-    <Content Include="App_Data\TeacherControlDb_log.ldf">
-      <DependentUpon>TeacherControlDb.mdf</DependentUpon>
-    </Content>
-    <Content Include="Consultas\ConsultaEvaluaciones.aspx" />
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
+    <Content Include="Consultas\ConsultaUsuario.aspx" />
     <Content Include="Consultas\cSemestres.aspx" />
     <Content Include="Css\styles.css" />
     <Content Include="Default.aspx" />
@@ -80,19 +76,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\ConsultaEvaluaciones.aspx.cs">
-      <DependentUpon>ConsultaEvaluaciones.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\ConsultaEvaluaciones.aspx.designer.cs">
-      <DependentUpon>ConsultaEvaluaciones.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Consultas\ConsultaAsitencia.aspx.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Consultas\ConsultaAsitencia.aspx.designer.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaUsuario.aspx.cs">
+      <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaUsuario.aspx.designer.cs">
+      <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Consultas\cSemestres.aspx.cs">
       <DependentUpon>cSemestres.aspx</DependentUpon>
@@ -116,11 +112,6 @@
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
     <Compile Include="Registros\RegistroAsignatura.aspx.cs">
       <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,10 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -195,7 +182,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
