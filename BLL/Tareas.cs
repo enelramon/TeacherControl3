@@ -16,7 +16,6 @@ namespace BLL
        public DateTime Vence { get; set; }
        public int IdSemestre{ get; set; }
        public int IdAsignatura{ get; set; }
-       public int IdSeccion { get; set; }
        public string Descripcion { get; set; }
        ConexionDb conectar = new ConexionDb();
 
@@ -28,18 +27,17 @@ namespace BLL
            Vence = DateTime.Now;
            IdSemestre = 0;
            IdAsignatura = 0;
-           IdSeccion = 0;
            Descripcion = "";
        }
 
        public void Insertar() 
        {
-           conectar.EjecutarDB("Insert Into Tareas(CodigoTarea,Fecha,Vence,IdSemestre,IdAsignatura,IdSeccion,Descripcion) values ('"+this.CodigoTarea+"', '"+this.Fecha.ToString("yyyy/MM/dd")+"','"+this.Vence.ToString("dddd/MM/dd")+"',"+this.IdSemestre+","+this.IdAsignatura+","+this.IdSeccion+","+this.Descripcion+") ");
+           conectar.EjecutarDB("Insert Into Tareas(CodigoTarea,Fecha,Vence,IdSemestre,IdAsignatura,Descripcion) values ('"+this.CodigoTarea+"', '"+this.Fecha.ToString("yyyy/MM/dd")+"','"+this.Vence.ToString("yyyy/MM/dd")+"',"+this.IdSemestre+","+this.IdAsignatura+","+this.Descripcion+") ");
        }
 
        public bool Modificar(int idm)
        {
-           return conectar.EjecutarDB("Update Tareas set CodigoTarea ='"+this.CodigoTarea+"', Fecha ='"+this.Fecha.ToString("dddd/MM/dd")+"', Vence ='"+this.Vence.ToString("yyyy/MM/dd")+"', IdAsignatura= "+this.IdAsignatura+", IdSeccion = "+this.IdSeccion+", Descripcion = '"+this.Descripcion+"' where IdTarea = "+ idm);
+           return conectar.EjecutarDB("Update Tareas set CodigoTarea ='"+this.CodigoTarea+"', Fecha ='"+this.Fecha.ToString("yyyy/MM/dd")+"', Vence ='"+this.Vence.ToString("yyyy/MM/dd")+"', IdAsignatura= "+this.IdAsignatura+", Descripcion = '"+this.Descripcion+"' where IdTarea = "+ idm);
        }
 
        public bool Eliminar(int ide)
@@ -66,7 +64,6 @@ namespace BLL
                this.Vence = (DateTime)dt.Rows[0]["Vence"];
                this.IdSemestre = (int)dt.Rows[0]["IdSemestre"];
                this.IdAsignatura= (int)dt.Rows[0]["IdAsignatura"];
-               this.IdSeccion = (int)dt.Rows[0]["IdSeccion"];
                this.Descripcion = (string)dt.Rows[0]["Descripcion"];
       
            }
