@@ -18,7 +18,8 @@ namespace DAL
         //    get { return WebConfigurationManager.AppSettings["ConexionString"]; }
         //}
 
-        public static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\REstudiante.mdf;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection(@"Data Source=.\SqlExpress;Initial Catalog=TeacherControlDb3;Integrated Security=True");
+        //public static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\TeacherControlDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         public string ultimoError;
 

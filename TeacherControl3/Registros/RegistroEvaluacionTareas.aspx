@@ -29,10 +29,17 @@
         </tr>
         <tr>
             <td class="auto-style1" style="font-family: 'Arial Rounded MT Bold'">
-                <asp:Label ID="Label2" runat="server" Text="IdEstudiante"></asp:Label>
+                <asp:Label ID="Label6" runat="server" Text="IdTarea"></asp:Label>
             </td>
             <td class="auto-style4">
-                <asp:Button ID="VerEstudianteButton" runat="server" OnClick="VerEstudianteButton_Click" Text="Ver Estudiante" />
+                <asp:TextBox ID="IdTareaTextBox" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style2" style="font-family: 'Arial Rounded MT Bold'">
+                <asp:Label ID="Label2" runat="server" Text="IdEstudiante"></asp:Label>
+            </td>
+            <td class="auto-style3">
                 <asp:TextBox ID="IdEstudianteTextBox" runat="server" Height="29px" Width="427px"></asp:TextBox>
             </td>
         </tr>
@@ -42,14 +49,6 @@
             </td>
             <td class="auto-style3">
                 <asp:TextBox ID="CalificacionTextBox" runat="server" Height="29px" Width="427px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style2" style="font-family: 'Arial Rounded MT Bold'">
-                <asp:Label ID="Label6" runat="server" Text="IdTarea"></asp:Label>
-            </td>
-            <td class="auto-style3">
-                <asp:TextBox ID="IdTareaTextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
