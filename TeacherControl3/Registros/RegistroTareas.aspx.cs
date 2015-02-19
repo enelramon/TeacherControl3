@@ -5,8 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
-
-namespace TeacherControl3
+namespace TeacherControl3.Registros
 {
     public partial class RegistroTareas : System.Web.UI.Page
     {
