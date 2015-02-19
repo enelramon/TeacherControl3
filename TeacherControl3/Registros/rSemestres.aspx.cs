@@ -95,6 +95,11 @@ namespace TeacherControl3.Registros
             Limpiar();
         }
 
+        protected void esActivoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 

@@ -40,6 +40,15 @@ namespace TeacherControl3 {
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
         
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// NombreLabel control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace TeacherControl3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// ClaveLabel control.
@@ -76,6 +94,15 @@ namespace TeacherControl3 {
         protected global::System.Web.UI.WebControls.TextBox ClaveTextBox;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// EmailLabel control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace TeacherControl3 {
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
         
         /// <summary>
+        /// CustomValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+        
+        /// <summary>
         /// esActivoLabel control.
         /// </summary>
         /// <remarks>
@@ -103,13 +139,13 @@ namespace TeacherControl3 {
         protected global::System.Web.UI.WebControls.Label esActivoLabel;
         
         /// <summary>
-        /// ActivoTextBox control.
+        /// esActivoCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ActivoTextBox;
+        protected global::System.Web.UI.WebControls.CheckBox esActivoCheckBox;
         
         /// <summary>
         /// ClearButton control.

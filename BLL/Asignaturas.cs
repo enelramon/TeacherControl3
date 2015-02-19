@@ -15,7 +15,7 @@ namespace BLL
         public string Nombre { get; set; }
         public int Creditos { get; set; }
         public Boolean esActivo {get;set;}
-        
+
 
         public Asignaturas(int Codigo, string Nombre, int Creditos, Boolean esActivo)
         {

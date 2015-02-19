@@ -1,4 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="rSemestres.aspx.cs" Inherits="TeacherControl3.Registros.rSemestres" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" 
+    AutoEventWireup="true" 
+    CodeBehind="rSemestres.aspx.cs" 
+    Inherits="TeacherControl3.Registros.rSemestres" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -71,6 +75,10 @@
                 </td>
                 <td>
         <asp:TextBox ID="FechaFinalTextBox" runat="server" TextMode="Date" Width="159px"></asp:TextBox>
+    </p>
+    <p>
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:CheckBox ID="esActivoCheckBox" runat="server" BackColor="Silver" Font-Bold="True" ForeColor="#000099" Text="Activo" OnCheckedChanged="esActivoCheckBox_CheckedChanged" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
                 <td>&nbsp;</td>
             </tr>

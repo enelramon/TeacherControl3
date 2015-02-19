@@ -7,6 +7,13 @@
         .auto-style2 {
             width: 255px;
         }
+        .auto-style3 {
+            width: 194px;
+            height: 51px;
+        }
+        .auto-style4 {
+            height: 51px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -24,6 +31,7 @@
             </td>
             <td colspan="2">
                 <asp:TextBox ID="IdTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="IdTextBox" ErrorMessage="Introdusca un Id valido" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -32,6 +40,7 @@
             </td>
             <td colspan="2">
                 <asp:TextBox ID="NombreTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="NombreTextBox" ErrorMessage="Introdusca un Nombre valido" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -40,14 +49,16 @@
             </td>
             <td colspan="2">
                 <asp:TextBox ID="ClaveTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ClaveTextBox" ErrorMessage="Introdusca una Clave Valida" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">
+            <td class="auto-style3">
                 <asp:Label ID="EmailLabel" runat="server" Text="Email" ForeColor="Black"></asp:Label>
             </td>
-            <td colspan="2">
+            <td colspan="2" class="auto-style4">
                 <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
+                <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Introdusca un Email valido" ForeColor="Red" ValidateEmptyText="True">*</asp:CustomValidator>
             </td>
         </tr>
         <tr>
@@ -55,7 +66,7 @@
                 <asp:Label ID="esActivoLabel" runat="server" Text="esActivo" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
-                <asp:TextBox ID="ActivoTextBox" runat="server"></asp:TextBox>
+                <asp:CheckBox ID="esActivoCheckBox" runat="server" />
             </td>
         </tr>
         <tr>
