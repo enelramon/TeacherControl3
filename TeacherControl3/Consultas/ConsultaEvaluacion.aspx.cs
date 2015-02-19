@@ -10,8 +10,8 @@ namespace TeacherControl3
 {
     public partial class ConsultaEvaluacion : System.Web.UI.Page
     {
-        EvaluacionesTareas Evaluacion = new EvaluacionesTareas();
-         string campos = "IdEstudiante, IdTarea  CONVERT"
+        //EvaluacionesTareas Evaluacion = new EvaluacionesTareas();
+        // string campos = "IdEstudiante, IdTarea  CONVERT"
 
         protected void Page_Load(object sender, EventArgs e)
         {

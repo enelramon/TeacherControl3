@@ -5,21 +5,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
-namespace TeacherControl3
+namespace TeacherControl3.Registros
 {
     public partial class RegistroTareas : System.Web.UI.Page
     {
         public void LLenarClase(Tareas tarea)
         {
             tarea.CodigoTarea = CodigotareaTextBox.Text;
-            tarea.Fecha = Convert.ToDateTime( FechaTextBox.Text);
+            tarea.Fecha = Convert.ToDateTime(FechaTextBox.Text);
             tarea.Vence = Convert.ToDateTime(VenseTextBox.Text);
             tarea.IdSemestre = Convert.ToInt32(IdsemestreDropDownList.Text);
             tarea.IdAsignatura = Convert.ToInt32(IdasignaturaDropDownList.Text);
             tarea.Descripcion = DescripcionTextBox.Text;
         }
 
-        public void LLenarCampos(Tareas tarea) 
+        public void LLenarCampos(Tareas tarea)
         {
             IdtareaTextBox.Text = tarea.IdTarea.ToString();
             CodigotareaTextBox.Text = tarea.CodigoTarea.ToString();
@@ -27,8 +27,8 @@ namespace TeacherControl3
             VenseTextBox.Text = tarea.Vence.ToString("yyyy/MM/dd");
             IdsemestreDropDownList.Text = tarea.IdSemestre.ToString();
             IdasignaturaDropDownList.Text = tarea.IdSemestre.ToString();
-            DescripcionTextBox.Text = tarea.Descripcion.ToString();          
-            
+            DescripcionTextBox.Text = tarea.Descripcion.ToString();
+
         }
 
         public void VaciarCampos()
@@ -40,7 +40,7 @@ namespace TeacherControl3
             IdsemestreDropDownList.Text = "";
             IdasignaturaDropDownList.Text = "";
             DescripcionTextBox.Text = "";
-        
+
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -50,11 +50,11 @@ namespace TeacherControl3
                 Tareas tarea = new Tareas();
                 if (Request.QueryString["IdTarea"] != null)
                 {
-                     IdtareaTextBox.Text = Request.QueryString["IdTarea"];
+                    IdtareaTextBox.Text = Request.QueryString["IdTarea"];
 
-                    if(tarea.Buscar(Convert.ToInt32(IdtareaTextBox.Text))
-                    this.LLenarCampos(tarea);
-                    
+                    if (tarea.Buscar(Convert.ToInt32(IdtareaTextBox.Text)))
+                        this.LLenarCampos(tarea);
+
                 }
             }
         }

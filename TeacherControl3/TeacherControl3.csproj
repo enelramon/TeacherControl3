@@ -57,7 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Consultas\ConsultaEvaluacion.aspx" />
+    <Content Include="App_Data\TeacherControlDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TeacherControlDb_log.ldf">
+      <DependentUpon>TeacherControlDb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
     <Content Include="Consultas\cSemestres.aspx" />
@@ -69,21 +75,15 @@
     <Content Include="Registros\RegistroAsignatura.aspx" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
+    <Content Include="Registros\RegistroTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Registros\RegistroUsuarios.aspx" />
-    <Content Include="Registros\RegistroTareas.aspx" />
     <Content Include="Registros\rSemestres.aspx" />
+    <Content Include="Registros\sumar.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\ConsultaEvaluacion.aspx.cs">
-      <DependentUpon>ConsultaEvaluacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\ConsultaEvaluacion.aspx.designer.cs">
-      <DependentUpon>ConsultaEvaluacion.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Consultas\ConsultaAsitencia.aspx.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -120,6 +120,11 @@
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegistroAsignatura.aspx.cs">
       <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +150,9 @@
       <DependentUpon>RegistroTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Registros\RegistroTareas.aspx.designer.cs">
+      <DependentUpon>RegistroTareas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,6 +174,13 @@
     <Compile Include="Registros\rSemestres.aspx.designer.cs">
       <DependentUpon>rSemestres.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\sumar.aspx.cs">
+      <DependentUpon>sumar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\sumar.aspx.designer.cs">
+      <DependentUpon>sumar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,6 +191,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -190,7 +209,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Code\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

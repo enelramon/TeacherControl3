@@ -49,6 +49,15 @@ namespace TeacherControl3.Registros {
         protected global::System.Web.UI.WebControls.TextBox CodigoTextBox;
         
         /// <summary>
+        /// CodigoRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CodigoRequiredFieldValidator;
+        
+        /// <summary>
         /// FechaInicio control.
         /// </summary>
         /// <remarks>
@@ -148,15 +157,6 @@ namespace TeacherControl3.Registros {
         protected global::System.Web.UI.WebControls.CheckBox esActivoCheckBox;
         
         /// <summary>
-        /// ClearButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ClearButton;
-        
-        /// <summary>
         /// SaveButton control.
         /// </summary>
         /// <remarks>
@@ -164,5 +164,14 @@ namespace TeacherControl3.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SaveButton;
+        
+        /// <summary>
+        /// ClearButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ClearButton;
     }
 }

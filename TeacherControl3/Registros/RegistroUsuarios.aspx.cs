@@ -5,19 +5,35 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using BLL.Utilitarios;
 
 namespace TeacherControl3
 {
     public partial class RegistroUsuarios : System.Web.UI.Page
     {
-        Usuarios usuario = new Usuarios();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Usuarios usuario = new Usuarios();
             MsjLabel.Text = "";
             if (!IsPostBack)
             {
                 Session["Modificando"] = false;
+                int IdUsuario = 0;
+                IdUsuario = Util.ObtenerEntero(Request.QueryString["IdUsuario"]);
+
+                if(IdUsuario != 0)
+                {
+                    ClearButton.Visible = true;
+                    SaveButton.Visible = true;
+                    IdTextBox.Visible = true;
+                    IdTextBox.Text = IdUsuario.ToString();
+                }
+               if (usuario.Buscar(IdUsuario))
+               {
+                   llenacampo(usuario);
+                  
+               }
             }
 
         }
@@ -25,14 +41,14 @@ namespace TeacherControl3
         #region "Metodos"
 
 
-        private void llenacampo()
+        private void llenacampo(Usuarios usuario)
         {
+            
             IdTextBox.Text = Convert.ToString(IdTextBox.Text);
-
             NombreTextBox.Text = usuario.Nombre;
             ClaveTextBox.Text = usuario.Clave;
             EmailTextBox.Text = usuario.Email;
-            ActivoTextBox.Text = Convert.ToString(ActivoTextBox.Text);
+            esActivoCheckBox.Checked = usuario.esActivo;
 
             if (usuario.Nombre !=null)
             {
@@ -43,15 +59,16 @@ namespace TeacherControl3
                 Session["Modificando"] = false;
             }
         }
- 
-  
-        private void llenaclase()
+
+
+        private void llenaclase(Usuarios usuario)
         {
+            
             usuario.IdUsuario = Convert.ToInt32(IdTextBox.Text);
             usuario.Nombre = NombreTextBox.Text;
             usuario.Clave = ClaveTextBox.Text;
             usuario.Email = EmailTextBox.Text;
-            usuario.esActivo = Convert.ToInt32(ActivoTextBox.Text);
+            usuario.esActivo = esActivoCheckBox.Checked;
         }
 
         private void limpiacampos()
@@ -62,7 +79,7 @@ namespace TeacherControl3
             NombreTextBox.Text = "";
             ClaveTextBox.Text = "";
             EmailTextBox.Text = "";
-            ActivoTextBox.Text = "";
+            esActivoCheckBox.Checked = false;
 
         }
       
@@ -73,7 +90,8 @@ namespace TeacherControl3
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
-            llenaclase();
+            Usuarios usuario = new Usuarios();
+            llenaclase(usuario);
             if (Convert.ToBoolean(Session["Modificando"]) == false)
             {
                 if (usuario.Insertar() )
@@ -88,11 +106,32 @@ namespace TeacherControl3
                     MsjLabel.ForeColor = System.Drawing.Color.Red;
                     MsjLabel.Text = "Error de registro";
                 }
+                if (Request.QueryString["IdUsuario"] != null)
+                {
+                    usuario.IdUsuario = int.Parse(Request.QueryString["IdUsuario"]);
+                        if(usuario.Insertar())
+                            {
+                                limpiacampos();
+                                Response.Write("Se ha Guardado Correctamente");
+                            }
+                        else
+                            if (usuario.Modificar())
+                            {
+                                 Response.Redirect("ConsultaUsuario.aspx");
+                            }
+                        else
+                            {
+                                Response.Write("No se pudo Modificar");
+                            }
+                       
+                }
+                    
             }
         }
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
+            Usuarios usuario = new Usuarios();
             if(usuario.Eliminar(IdTextBox.Text) == true)
             {
                 MsjLabel.ForeColor = System.Drawing.Color.Green;

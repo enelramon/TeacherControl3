@@ -15,7 +15,8 @@ namespace BLL
        public string Nombre { set; get; }
        public string Clave { set; get; }
        public string Email { set; get; }
-       public int esActivo { set; get; }
+       public bool esActivo { set; get; }
+       DataTable datos = new DataTable();
 
        public ConexionDb conexion = new ConexionDb();
 
@@ -59,16 +60,16 @@ namespace BLL
                this.Nombre = (string)Datos.Rows[0]["Nombre"];
                this.Clave = (string)Datos.Rows[0]["Clave"];
                this.Email = (string)Datos.Rows[0]["Email"];
-               this.esActivo = (int)Datos.Rows[0]["esActivo"];
+               this.esActivo = (bool)Datos.Rows[0]["esActivo"];
            }
 
            return Retorno;
        }
 
-       public DataTable Listar(string FiltroWhere)
+       public DataTable Listar(string Campos)
        {
            DataTable datos = new DataTable();
-           datos = conexion.BuscarDb("Select IdUsuario,Nombre,Email,esActivo from Usuarios Where " + FiltroWhere);
+           datos = conexion.BuscarDb("Select IdUsuario,Nombre,Email,esActivo from Usuarios Where " + Campos);
            return datos;
        }
 
