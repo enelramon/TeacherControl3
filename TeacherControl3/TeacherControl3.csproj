@@ -57,9 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TeacherControlDb.mdf" />
+    <Content Include="App_Data\TeacherControlDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\TeacherControlDb_log.ldf">
       <DependentUpon>TeacherControlDb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
@@ -76,6 +79,7 @@
     <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Registros\RegistroUsuarios.aspx" />
     <Content Include="Registros\rSemestres.aspx" />
+    <Content Include="Registros\sumar.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -169,6 +173,13 @@
     </Compile>
     <Compile Include="Registros\rSemestres.aspx.designer.cs">
       <DependentUpon>rSemestres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\sumar.aspx.cs">
+      <DependentUpon>sumar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\sumar.aspx.designer.cs">
+      <DependentUpon>sumar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

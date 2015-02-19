@@ -12,7 +12,7 @@ namespace TeacherControl3.Registros
         public void LLenarClase(Tareas tarea)
         {
             tarea.CodigoTarea = CodigotareaTextBox.Text;
-            tarea.Fecha = Convert.ToDateTime( FechaTextBox.Text);
+            tarea.Fecha = Convert.ToDateTime(FechaTextBox.Text);
             tarea.Vence = Convert.ToDateTime(VenseTextBox.Text);
             tarea.IdSemestre = Convert.ToInt32(IdsemestreDropDownList.Text);
             tarea.IdAsignatura = Convert.ToInt32(IdasignaturaDropDownList.Text);

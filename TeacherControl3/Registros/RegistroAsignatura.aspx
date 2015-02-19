@@ -45,13 +45,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style1" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="NuevoButton" runat="server" OnClick="NuevoButton_Click" Text="Nuevo" />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="EliminarButton" runat="server" OnClick="EliminarButton_Click" Text="Eliminar " />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="GuardarButton" runat="server" Height="30px" OnClick="GuardarButton_Click" Text="Guardar" Width="86px" />
-                &nbsp; </td>
+           
         </tr>
     </table>
     </asp:Content>
