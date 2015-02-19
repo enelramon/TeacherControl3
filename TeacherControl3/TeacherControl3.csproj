@@ -57,14 +57,29 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TeacherControlDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\TeacherControlDb_log.ldf">
+      <DependentUpon>TeacherControlDb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
+    <Content Include="Consultas\ConsultaUsuario.aspx" />
+    <Content Include="Consultas\cSemestres.aspx" />
     <Content Include="Css\styles.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Imagenes\image.jpg" />
+    <Content Include="LogIn.aspx" />
     <Content Include="Registros\Mejoras Pendientes.txt" />
     <Content Include="Registros\RegistroAsignatura.aspx" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
+    <Content Include="Registros\RegistroTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
+    <Content Include="Registros\RegistroUsuarios.aspx" />
+    <Content Include="Registros\rSemestres.aspx" />
+    <Content Include="Registros\sumar.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -76,9 +91,40 @@
     <Compile Include="Consultas\ConsultaAsitencia.aspx.designer.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\ConsultaUsuario.aspx.cs">
+      <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaUsuario.aspx.designer.cs">
+      <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cSemestres.aspx.cs">
+      <DependentUpon>cSemestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cSemestres.aspx.designer.cs">
+      <DependentUpon>cSemestres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registros\EvaluacionesTareas.cs" />
-    <Compile Include="Registros\EvaluacionTareas.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegistroAsignatura.aspx.cs">
       <DependentUpon>RegistroAsignatura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -100,12 +146,40 @@
     <Compile Include="Registros\RegistroEvaluacionTareas.aspx.designer.cs">
       <DependentUpon>RegistroEvaluacionTareas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\RegistroTareas.aspx.cs">
+      <DependentUpon>RegistroTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroTareas.aspx.designer.cs">
+      <DependentUpon>RegistroTareas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.designer.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RegistroUsuarios.aspx.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroUsuarios.aspx.designer.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rSemestres.aspx.cs">
+      <DependentUpon>rSemestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rSemestres.aspx.designer.cs">
+      <DependentUpon>rSemestres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\sumar.aspx.cs">
+      <DependentUpon>sumar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\sumar.aspx.designer.cs">
+      <DependentUpon>sumar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -117,6 +191,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -131,7 +209,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Code\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

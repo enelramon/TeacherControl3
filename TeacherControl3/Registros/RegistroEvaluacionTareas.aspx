@@ -32,6 +32,7 @@
                 <asp:Label ID="Label2" runat="server" Text="IdEstudiante"></asp:Label>
             </td>
             <td class="auto-style4">
+                <asp:Button ID="VerEstudianteButton" runat="server" OnClick="VerEstudianteButton_Click" Text="Ver Estudiante" />
                 <asp:TextBox ID="IdEstudianteTextBox" runat="server" Height="29px" Width="427px"></asp:TextBox>
             </td>
         </tr>
@@ -49,6 +50,13 @@
             </td>
             <td class="auto-style3">
                 <asp:TextBox ID="IdTareaTextBox" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style2" style="font-family: 'Arial Rounded MT Bold'">
+                &nbsp;</td>
+            <td class="auto-style3">
+                <asp:TextBox ID="IdTareaTextBox0" runat="server" Height="103px" Width="356px"></asp:TextBox>
             </td>
         </tr>
         <tr>

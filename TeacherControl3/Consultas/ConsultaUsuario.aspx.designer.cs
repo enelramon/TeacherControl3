@@ -7,81 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TeacherControl3.Registros {
+namespace TeacherControl3.Consultas {
     
     
-    public partial class RegistroAsignatura {
+    public partial class ConsultaUsuario {
         
         /// <summary>
-        /// IdAsignatura control.
+        /// ConsultaUsuarioLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IdAsignatura;
+        protected global::System.Web.UI.WebControls.Label ConsultaUsuarioLabel;
         
         /// <summary>
-        /// IdAsignaturaTextBox control.
+        /// BuscarLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdAsignaturaTextBox;
+        protected global::System.Web.UI.WebControls.Label BuscarLabel;
         
         /// <summary>
-        /// CodigoLabel control.
+        /// BuscarDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CodigoLabel;
+        protected global::System.Web.UI.WebControls.DropDownList BuscarDropDownList;
         
         /// <summary>
-        /// CodigoTextBox control.
+        /// BuscarTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CodigoTextBox;
+        protected global::System.Web.UI.WebControls.TextBox BuscarTextBox;
         
         /// <summary>
-        /// NombreLabel control.
+        /// BuscarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NombreLabel;
+        protected global::System.Web.UI.WebControls.Button BuscarButton;
         
         /// <summary>
-        /// NombreTextBox control.
+        /// BuscarGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
-        
-        /// <summary>
-        /// CreditosLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CreditosLabel;
-        
-        /// <summary>
-        /// CreditosTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CreditosTextBox;
+        protected global::System.Web.UI.WebControls.GridView BuscarGridView;
     }
 }

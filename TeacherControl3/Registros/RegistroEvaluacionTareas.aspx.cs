@@ -20,24 +20,22 @@ namespace TeacherControl3.Registros
 
         public void LlenarClase(EvaluacionesTareas Evaluacion)
         {
-            Evaluacion.IdEstudiante = IdEstudianteTextBox.Text;
-            Evaluacion.IdEvaluacion = IdEvaluacionTextBox.Text;
+            Evaluacion.IdEstudiante = Convert.ToInt32( IdEstudianteTextBox.Text);
+            Evaluacion.IdEvaluacion = Convert.ToInt32(IdEvaluacionTextBox.Text);
             Evaluacion.Fecha = Convert.ToDateTime(FechaTextBox.Text);
-            Evaluacion.Calificacion = CalificacionTextBox.Text;
-            Evaluacion.IdTarea = IdTareaTextBox.Text;
-
+            Evaluacion.Calificacion = Convert.ToInt32(CalificacionTextBox.Text);
+            Evaluacion.IdTarea = Convert.ToInt32(IdTareaTextBox.Text);
 
         }
 
-
-
+        
         public void LlenarCampos(EvaluacionesTareas Evaluacion)
         {
-            IdEstudianteTextBox.Text = Evaluacion.IdEstudiante;
-            IdEvaluacionTextBox.Text = Evaluacion.IdEvaluacion;
+            IdEstudianteTextBox.Text = Evaluacion.IdEstudiante.ToString();
+            IdEvaluacionTextBox.Text = Evaluacion.IdEvaluacion.ToString();
             FechaTextBox.Text = Evaluacion.Fecha.ToString("yyyy-MM-dd");
-            CalificacionTextBox.Text = Evaluacion.Calificacion;
-            IdTareaTextBox.Text = Evaluacion.IdTarea;
+            CalificacionTextBox.Text = Evaluacion.Calificacion.ToString();
+            IdTareaTextBox.Text = Evaluacion.IdTarea.ToString();
             
         }
 
@@ -90,7 +88,7 @@ namespace TeacherControl3.Registros
         {
             EvaluacionesTareas Evaluacion = new EvaluacionesTareas();
             Evaluacion.Eliminar(Convert.ToInt32(IdEvaluacionTextBox.Text.Trim()));
-            string IdProfesor = IdEvaluacionTextBox.Text;
+
             VaciarCampos();
             //MensajeLabel.Text = "Evaluacion con el Id " + IdEvaluacion + " fue Eliminado";
         }
@@ -98,6 +96,11 @@ namespace TeacherControl3.Registros
         protected void EliminarButton_Click1(object sender, EventArgs e)
         {
 
+        }
+
+        protected void VerEstudianteButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Registros/RegistroEstudiantes.aspx?IdEstudiante=" + IdEstudianteTextBox.Text);
         }
 
 

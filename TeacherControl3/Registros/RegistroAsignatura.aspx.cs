@@ -23,17 +23,13 @@ namespace TeacherControl3.Registros
             int.TryParse(IdAsignaturaTextBox.Text, out IdAsignatura);
 
             a.Nombre = NombreTextBox.Text;
-            a.Creditos = CreditosTextBox.Text;
-            a.Codigo = CodigoTextBox.Text;
-
-
-
-
+            a.Creditos = Convert.ToInt32( CreditosTextBox.Text);
+            a.Codigo = Convert.ToInt32(CodigoTextBox.Text);
+            
             if (a.Insertar())
             {
 
-
-
+                
             }
 
         }
