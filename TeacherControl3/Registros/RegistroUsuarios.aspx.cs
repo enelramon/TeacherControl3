@@ -31,7 +31,7 @@ namespace TeacherControl3
                 }
                if (usuario.Buscar(IdUsuario))
                {
-                   llenacampo();
+                   llenacampo(usuario);
                   
                }
             }
@@ -41,11 +41,10 @@ namespace TeacherControl3
         #region "Metodos"
 
 
-        private void llenacampo()
+        private void llenacampo(Usuarios usuario)
         {
-            Usuarios usuario = new Usuarios();
+            
             IdTextBox.Text = Convert.ToString(IdTextBox.Text);
-
             NombreTextBox.Text = usuario.Nombre;
             ClaveTextBox.Text = usuario.Clave;
             EmailTextBox.Text = usuario.Email;
@@ -60,11 +59,11 @@ namespace TeacherControl3
                 Session["Modificando"] = false;
             }
         }
- 
-  
-        private void llenaclase()
+
+
+        private void llenaclase(Usuarios usuario)
         {
-            Usuarios usuario = new Usuarios();
+            
             usuario.IdUsuario = Convert.ToInt32(IdTextBox.Text);
             usuario.Nombre = NombreTextBox.Text;
             usuario.Clave = ClaveTextBox.Text;
@@ -92,7 +91,7 @@ namespace TeacherControl3
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             Usuarios usuario = new Usuarios();
-            llenaclase();
+            llenaclase(usuario);
             if (Convert.ToBoolean(Session["Modificando"]) == false)
             {
                 if (usuario.Insertar() )
