@@ -52,7 +52,7 @@ namespace TeacherControl3.Registros
                 {
                      IdtareaTextBox.Text = Request.QueryString["IdTarea"];
 
-                    if(tarea.Buscar(Convert.ToInt32(IdtareaTextBox.Text))
+                    if(tarea.Buscar(Convert.ToInt32(IdtareaTextBox.Text)))
                     this.LLenarCampos(tarea);
                     
                 }
