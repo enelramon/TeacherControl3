@@ -57,9 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TeacherControlDb.mdf" />
+    <Content Include="App_Data\TeacherControlDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\TeacherControlDb_log.ldf">
       <DependentUpon>TeacherControlDb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
