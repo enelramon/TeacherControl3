@@ -1,4 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistroTareas.aspx.cs" Inherits="TeacherControl3.RegistroTareas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" 
+    AutoEventWireup="true"
+    CodeBehind="RegistroTareas.aspx.cs" 
+    Inherits="TeacherControl3.Registros.RegistroTareas" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -12,6 +16,7 @@
         }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
         <table class="auto-style1">

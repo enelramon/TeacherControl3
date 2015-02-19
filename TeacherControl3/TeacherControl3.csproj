@@ -72,9 +72,9 @@
     <Content Include="Registros\RegistroAsignatura.aspx" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
+    <Content Include="Registros\RegistroTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Registros\RegistroUsuarios.aspx" />
-    <Content Include="Registros\RegistroTareas.aspx" />
     <Content Include="Registros\rSemestres.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="Web.config" />
@@ -145,6 +145,9 @@
     <Compile Include="Registros\RegistroTareas.aspx.cs">
       <DependentUpon>RegistroTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroTareas.aspx.designer.cs">
+      <DependentUpon>RegistroTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\RegitroAsistencia.aspx.cs">
       <DependentUpon>RegitroAsistencia.aspx</DependentUpon>
