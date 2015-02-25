@@ -33,5 +33,7 @@ namespace TeacherControl3.Consultas
             BuscarGridView.DataSource = semestre.Listar(campos, filtro);
             BuscarGridView.DataBind();
         }
+
+        
     }
 }
