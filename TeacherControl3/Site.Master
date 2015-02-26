@@ -32,11 +32,11 @@ License: Creative Commons Attribution
         <nav>
             <%--MENU--%>
             <ul>
-                <li class="start"><a href="index.html">Home</a></li>
-                <li class="selected"><a href="examples.html">Examples</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li class="end"><a href="#">Contact</a></li>
+                <li class="start"><a href="index.html">Inicio</a></li>
+                <li class="selected"><a href="examples.html">Registro</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Soluciones</a></li>
+                <li class="end"><a href="#">Contacto</a></li>
             </ul>
         </nav>
 
@@ -65,10 +65,10 @@ to sign in.--%>
 
                 <ul>
                     <li>
-                        <h4>Categories</h4>
+                        <h4>Categorias</h4>
                         <ul>
-                            <li><a href="index.html">Home Page</a></li>
-                            <li><a href="examples.html">Style Examples</a></li>
+                            <li><a href="index.html">Pagina Principal</a></li>
+                            <li><a href="examples.html">Ucne</a></li>
                             <li><a href="#">Commodo vestibulum sem mattis</a></li>
                             <li><a href="#">Sed aliquam libero ut velit bibendum</a></li>
                             <li><a href="#">Maecenas condimentum velit vitae</a></li>

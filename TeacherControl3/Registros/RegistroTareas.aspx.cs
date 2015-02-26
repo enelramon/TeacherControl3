@@ -19,7 +19,7 @@ namespace TeacherControl3.Registros
             tarea.Descripcion = DescripcionTextBox.Text;
         }
 
-        public void LLenarCampos(Tareas tarea)
+        public void LLenarCampos(Tareas tarea) 
         {
             IdtareaTextBox.Text = tarea.IdTarea.ToString();
             CodigotareaTextBox.Text = tarea.CodigoTarea.ToString();
@@ -27,8 +27,8 @@ namespace TeacherControl3.Registros
             VenseTextBox.Text = tarea.Vence.ToString("yyyy/MM/dd");
             IdsemestreDropDownList.Text = tarea.IdSemestre.ToString();
             IdasignaturaDropDownList.Text = tarea.IdSemestre.ToString();
-            DescripcionTextBox.Text = tarea.Descripcion.ToString();
-
+            DescripcionTextBox.Text = tarea.Descripcion.ToString();          
+            
         }
 
         public void VaciarCampos()
@@ -40,7 +40,7 @@ namespace TeacherControl3.Registros
             IdsemestreDropDownList.Text = "";
             IdasignaturaDropDownList.Text = "";
             DescripcionTextBox.Text = "";
-
+        
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -50,11 +50,11 @@ namespace TeacherControl3.Registros
                 Tareas tarea = new Tareas();
                 if (Request.QueryString["IdTarea"] != null)
                 {
-                    IdtareaTextBox.Text = Request.QueryString["IdTarea"];
+                     IdtareaTextBox.Text = Request.QueryString["IdTarea"];
 
-                    if (tarea.Buscar(Convert.ToInt32(IdtareaTextBox.Text)))
-                        this.LLenarCampos(tarea);
-
+                    if(tarea.Buscar(Convert.ToInt32(IdtareaTextBox.Text)))
+                    this.LLenarCampos(tarea);
+                    
                 }
             }
         }

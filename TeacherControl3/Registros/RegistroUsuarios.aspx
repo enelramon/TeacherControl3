@@ -31,7 +31,12 @@
             </td>
             <td colspan="2">
                 <asp:TextBox ID="IdTextBox" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="IdTextBox" ErrorMessage="Introdusca un Id valido" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                     ControlToValidate="IdTextBox"
+                     ErrorMessage="Introdusca un Id valido"
+                     ForeColor="Red"
+                     SetFocusOnError="true">*
+                </asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -40,7 +45,12 @@
             </td>
             <td colspan="2">
                 <asp:TextBox ID="NombreTextBox" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="NombreTextBox" ErrorMessage="Introdusca un Nombre valido" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                    ControlToValidate="NombreTextBox" 
+                    ErrorMessage="Introdusca un Nombre valido"
+                    ForeColor="Red"
+                    SetFocusOnError="true">*
+                </asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -49,7 +59,12 @@
             </td>
             <td colspan="2">
                 <asp:TextBox ID="ClaveTextBox" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ClaveTextBox" ErrorMessage="Introdusca una Clave Valida" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                     ControlToValidate="ClaveTextBox"
+                     ErrorMessage="Introdusca una Clave Valida"
+                     ForeColor="Red"
+                     SetFocusOnError="true">*
+                </asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -58,7 +73,12 @@
             </td>
             <td colspan="2" class="auto-style4">
                 <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
-                <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Introdusca un Email valido" ForeColor="Red" ValidateEmptyText="True">*</asp:CustomValidator>
+                <asp:CustomValidator ID="CustomValidator1" runat="server"
+                     ControlToValidate="EmailTextBox"
+                     ErrorMessage="Introdusca un Email valido"
+                     ForeColor="Red"
+                     ValidateEmptyText="True">*
+                </asp:CustomValidator>
             </td>
         </tr>
         <tr>
