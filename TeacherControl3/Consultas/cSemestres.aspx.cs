@@ -30,6 +30,11 @@ namespace TeacherControl3.Consultas
             {
                 filtro += "and Codigo like '%" + BuscarTextBox.Text + "%'";
             }
+            if (BuscarDropDownList.SelectedIndex == 1)
+            {
+                filtro += "and IdSemestre like '%" + BuscarTextBox.Text + "%'";
+            }
+
             BuscarGridView.DataSource = semestre.Listar(campos, filtro);
             BuscarGridView.DataBind();
         }

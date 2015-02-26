@@ -10,7 +10,7 @@ namespace BLL
 {
     public class Semestres
     {
-        ConexionDb conexion = new ConexionDb();
+       
         DataTable dt = new DataTable();
         public int IdSemestre { set; get; }
         public string Codigo { set; get; }
@@ -21,6 +21,9 @@ namespace BLL
         public DateTime FechaFinal { set; get; }
         public bool esActivo { set; get; }
 
+        ConexionDb conexion = new ConexionDb();
+
+      
 
         public bool Insertar()
         {
@@ -35,7 +38,7 @@ namespace BLL
             return paso;
         }
 
-        public bool Eliminar()
+        public bool Eliminar()//poner estatico
         {
             return conexion.EjecutarDB("Delete From Semestres Where IdSemestre = " + IdSemestre);
         }

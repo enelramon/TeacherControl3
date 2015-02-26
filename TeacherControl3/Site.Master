@@ -22,7 +22,7 @@ License: Creative Commons Attribution
     <div id="container">
         <header>
             <h1>
-                
+
                 <a href="/">Teacher Control<span> 3 </span></a></h1>
             <h2>Portal web de gestion de estudiantes de Aplicada I y II</h2>
 
@@ -45,20 +45,12 @@ License: Creative Commons Attribution
             <section id="content">
 
                 <article>
-
                     <form id="form1" runat="server">
-                        <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
-                        <%--                                    Welcome <b><%=User.Identity.Name%></b>. Not <b><%=User.Identity.Name%></b>? 
-Click <asp:LinkButton id="LoginLink" Text="here"                       OnClick="LoginLink_OnClick" runat="server" />
-to sign in.--%>
-
-                        <div>
-                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                            </asp:ContentPlaceHolder>
-                        </div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
                     </form>
                 </article>
+
+
             </section>
 
             <aside class="sidebar">
@@ -87,14 +79,16 @@ to sign in.--%>
                 </ul>
 
             </aside>
+            <div class="clear"></div>
         </div>
         <%--FIN CUERPO DE LA MASTER PAGE--%>
 
         <footer>
 
-            <div class="footer-bottom">
+            <div class="footer-content">
                 <p>&copy; YourSite 2010. <a href="http://zypopwebtemplates.com/">Free CSS Web Templates</a> by ZyPOP</p>
             </div>
+            <div class="footer-bottom"></div>
         </footer>
     </div>
     <%--container--%>
