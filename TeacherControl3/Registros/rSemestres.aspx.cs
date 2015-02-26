@@ -19,7 +19,7 @@ namespace TeacherControl3.Registros
             {
                 int IdSemestre = 0;
 
-                IdSemestre =Util.ObtenerEntero(Request.QueryString["IdSemestre"]);
+                IdSemestre = Util.ObtenerEntero(Request.QueryString["IdSemestre"]);
 
                 if (IdSemestre != 0)
                 {
@@ -29,7 +29,7 @@ namespace TeacherControl3.Registros
                     IdSemestreTextBox.Visible = true;
 
                     IdSemestreTextBox.Text = IdSemestre.ToString();
-                   
+
 
                 }
 
@@ -79,10 +79,6 @@ namespace TeacherControl3.Registros
             }
 
         }
-
-
-
-
 
 
         private void Limpiar()
