@@ -42,12 +42,12 @@ namespace BLL
 
        public bool Eliminar(int ide)
        {
-       return conectar.EjecutarDB("Delete From Tareas where IdTarea= "+ ide);
+       return conectar.EjecutarDB("Delete From Tareas where "+ ide);
        }
 
        public DataTable Listar(string campo, string filtro) 
        {
-           return conectar.BuscarDb("Select "+ campo +" from Tareas where IdTarea= "+ filtro);
+           return conectar.BuscarDb("Select "+ campo +" from Tareas where "+ filtro);
        }
 
        public bool Buscar(int idb) 
@@ -55,7 +55,7 @@ namespace BLL
            DataTable dt = new DataTable();
            bool msj = false;
 
-           dt = conectar.BuscarDb("select * from Tareas where IdTarea= "+ idb);
+           dt = conectar.BuscarDb("select * from Tareas where "+ idb);
            if (dt.Rows.Count > 0) 
            {
                msj = true;
