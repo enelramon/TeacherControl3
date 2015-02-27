@@ -35,10 +35,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style1" colspan="4">&nbsp;</td>
         </tr>
     </table>
 </asp:Content>
