@@ -44,7 +44,7 @@ namespace DAL
                 cmd.ExecuteNonQuery(); // ejecutamos el comando
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
                 throw;

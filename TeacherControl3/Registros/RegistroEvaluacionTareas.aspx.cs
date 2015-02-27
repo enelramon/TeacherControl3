@@ -14,7 +14,7 @@ namespace TeacherControl3.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -24,7 +24,7 @@ namespace TeacherControl3.Registros
             Evaluacion.IdEvaluacion = Convert.ToInt32(IdEvaluacionTextBox.Text);
             Evaluacion.Fecha = Convert.ToDateTime(FechaTextBox.Text);
             Evaluacion.Calificacion = Convert.ToInt32(CalificacionTextBox.Text);
-            Evaluacion.IdTarea = Convert.ToInt32(IdTareaTextBox.Text);
+            Evaluacion.IdTarea = Convert.ToInt32(TareaDropDownList.Text);
 
         }
 
@@ -35,7 +35,8 @@ namespace TeacherControl3.Registros
             IdEvaluacionTextBox.Text = Evaluacion.IdEvaluacion.ToString();
             FechaTextBox.Text = Evaluacion.Fecha.ToString("yyyy-MM-dd");
             CalificacionTextBox.Text = Evaluacion.Calificacion.ToString();
-            IdTareaTextBox.Text = Evaluacion.IdTarea.ToString();
+            TareaDropDownList.Text = Evaluacion.IdTarea.ToString();
+          
             
         }
 
@@ -45,7 +46,7 @@ namespace TeacherControl3.Registros
             IdEvaluacionTextBox.Text = "";
             FechaTextBox.Text = "";
             CalificacionTextBox.Text = "";
-            IdTareaTextBox.Text = "";
+            //IdTareaTextBox.Text = "";
            
         }
 
@@ -68,29 +69,28 @@ namespace TeacherControl3.Registros
             EvaluacionesTareas Evaluacion = new EvaluacionesTareas();
             LlenarClase(Evaluacion);
             Evaluacion.Insertar();
-            //MensajeLabel.Text = "Guardado con Exito";
+            MensajeLabel.Text = "Guardado con Exito";
         }
 
     
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
-            //MensajeLabel.Text = "";
+            MensajeLabel.Text = "";
             BuscarEvaluacion();
         }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
-            //MensajeLabel.Text = "";
+            MensajeLabel.Text = "";
             VaciarCampos();
         }
 
         protected void EliminarButton_Click(object sender, EventArgs e)
         {
-            EvaluacionesTareas Evaluacion = new EvaluacionesTareas();
-            Evaluacion.Eliminar(Convert.ToInt32(IdEvaluacionTextBox.Text.Trim()));
+            EvaluacionesTareas.Eliminar(Convert.ToInt32(IdEvaluacionTextBox.Text.Trim()));
 
             VaciarCampos();
-            //MensajeLabel.Text = "Evaluacion con el Id " + IdEvaluacion + " fue Eliminado";
+            MensajeLabel.Text = "Evaluacion fue Eliminado";
         }
 
         protected void EliminarButton_Click1(object sender, EventArgs e)
@@ -101,6 +101,24 @@ namespace TeacherControl3.Registros
         protected void VerEstudianteButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Registros/RegistroEstudiantes.aspx?IdEstudiante=" + IdEstudianteTextBox.Text);
+        }
+
+        protected void IdTareaTextBox0_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void IdEvaluacionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {     
+            TareaDropDownList.DataSource = Tareas.Listar(" IdTarea, Descripcion ", "1=1");
+            TareaDropDownList.DataValueField = "IdTarea";
+            TareaDropDownList.DataTextField = "Descripcion";
+            TareaDropDownList.DataBind();
         }
 
 

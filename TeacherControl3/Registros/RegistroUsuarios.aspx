@@ -44,7 +44,7 @@
                 <asp:Label ID="NombreLabel" runat="server" Text="Nombre" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
-                <asp:TextBox ID="NombreTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="NombreTextBox" runat="server" Width="232px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="NombreTextBox" 
                     ErrorMessage="Introdusca un Nombre valido"
@@ -58,7 +58,7 @@
                 <asp:Label ID="ClaveLabel" runat="server" Text="Clave" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
-                <asp:TextBox ID="ClaveTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="ClaveTextBox" runat="server" Visible="False"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                      ControlToValidate="ClaveTextBox"
                      ErrorMessage="Introdusca una Clave Valida"
@@ -68,11 +68,19 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style1">
+                <asp:Label ID="ConfirmarLabel" runat="server" ForeColor="Black" Text="Confirmar Clave"></asp:Label>
+            </td>
+            <td colspan="2">
+                <asp:TextBox ID="ConfirmarTextBox" runat="server" Visible="False"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style3">
                 <asp:Label ID="EmailLabel" runat="server" Text="Email" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2" class="auto-style4">
-                <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="EmailTextBox" runat="server" Width="231px"></asp:TextBox>
                 <asp:CustomValidator ID="CustomValidator1" runat="server"
                      ControlToValidate="EmailTextBox"
                      ErrorMessage="Introdusca un Email valido"
@@ -83,8 +91,7 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Label ID="esActivoLabel" runat="server" Text="esActivo" ForeColor="Black"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td colspan="2">
                 <asp:CheckBox ID="esActivoCheckBox" runat="server" OnCheckedChanged="esActivoCheckBox_CheckedChanged" />
             </td>

@@ -19,6 +19,8 @@ License: Creative Commons Attribution
 </head>
 
 <body>
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div id="container">
         <header>
             <h1>
