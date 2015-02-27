@@ -86,7 +86,7 @@
                 <asp:Label ID="esActivoLabel" runat="server" Text="esActivo" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
-                <asp:CheckBox ID="esActivoCheckBox" runat="server" />
+                <asp:CheckBox ID="esActivoCheckBox" runat="server" OnCheckedChanged="esActivoCheckBox_CheckedChanged" />
             </td>
         </tr>
         <tr>

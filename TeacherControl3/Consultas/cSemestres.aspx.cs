@@ -18,8 +18,7 @@ namespace TeacherControl3.Consultas
         {
            if (!IsPostBack)
            {
-               BuscarGridView.DataSource = semestre.Listar(campos, filtro);
-               BuscarGridView.DataBind();
+               Buscargrid();
            }
 
         }
@@ -28,17 +27,27 @@ namespace TeacherControl3.Consultas
         {
             if (BuscarDropDownList.SelectedIndex == 0)
             {
-                filtro += "and Codigo like '%" + BuscarTextBox.Text + "%'";
+                filtro += "and IdSemestre like '%" + BuscarTextBox.Text + "%'";
             }
             if (BuscarDropDownList.SelectedIndex == 1)
             {
-                filtro += "and IdSemestre like '%" + BuscarTextBox.Text + "%'";
+                filtro += "and Codigo like '%" + BuscarTextBox.Text + "%'";
             }
 
+            Buscargrid();
+          
+        }
+
+        protected void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("rSemestres.aspx");
+        }
+
+        private void Buscargrid()
+        {
             BuscarGridView.DataSource = semestre.Listar(campos, filtro);
             BuscarGridView.DataBind();
         }
-
         
     }
 }
