@@ -64,6 +64,7 @@
       <DependentUpon>TeacherControlDb.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Consultas\ConsultaAsignatura.aspx" />
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Consultas\ConsultaEvaluacion.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
@@ -85,6 +86,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaAsignatura.aspx.cs">
+      <DependentUpon>ConsultaAsignatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaAsignatura.aspx.designer.cs">
+      <DependentUpon>ConsultaAsignatura.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaAsitencia.aspx.cs">
       <DependentUpon>ConsultaAsitencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

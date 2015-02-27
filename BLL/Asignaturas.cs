@@ -40,8 +40,8 @@ namespace BLL
          public bool Insertar()
          {
 
-             return conexiondb.EjecutarDB("Insert Into Asignaturas(Nombre, Creditos, Codigo, esActivo)Values('" + this.Nombre +
-                 "','" + this.Creditos + "','" + this.Codigo + "','" + this.esActivo + "')");
+             return conexiondb.EjecutarDB("Insert Into Asignaturas(Codigo, Nombre, Creditos, esActivo)Values('" + this.Codigo +
+                 "','" + this.Nombre + "','" + this.Creditos + "','" + this.esActivo + "')");
          }
 
          public bool Eliminar(int IdAsignatura)
@@ -54,7 +54,7 @@ namespace BLL
          public bool Modificar(int IdAsignatura)
          {
             
-             return conexiondb.EjecutarDB("Update from Asignaturas set Nombre = '" + Nombre + "', Creditos = '" + Creditos + "', Codigo ='" + Codigo + "', esActvo ='" + esActivo +  "' where IdAsignaturas= " + IdAsignatura);
+             return conexiondb.EjecutarDB("Update from Asignaturas set Nombre = '" + Nombre + "', Creditos = '" + Creditos + "', Codigo ='" + Codigo + "', esActvo ='" + esActivo +  "' where IdAsignatura= " + IdAsignatura);
          }
 
          public bool Buscar(int IdAsignatura)
@@ -73,8 +73,15 @@ namespace BLL
              return mensaje;
          }
 
+         public static DataTable Lista(String Campo, String FiltroWhere)
+         {
+
+             ConexionDb conexiondb = new ConexionDb();
+             return conexiondb.BuscarDb("Select " + Campo + " from Asignaturas " + FiltroWhere);
+
+         }
+
     }
-
-
+     
     }
 
