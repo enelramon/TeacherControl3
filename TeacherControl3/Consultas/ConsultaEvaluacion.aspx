@@ -18,18 +18,18 @@
                 <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Black" Text="Buscar"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="112px">
+                <asp:DropDownList ID="ConsultaDropDownList" runat="server" Width="112px" OnSelectedIndexChanged="ConsultaDropDownList_SelectedIndexChanged">
                     <asp:ListItem>Id</asp:ListItem>
                 </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="TextBox1" runat="server" Font-Bold="True"></asp:TextBox>
+                <asp:TextBox ID="ConsultaTextBox" runat="server" Font-Bold="True"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Buscar" />
+                <asp:Button ID="GuardarButton" runat="server" Text="Buscar" OnClick="Button1_Click" />
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <asp:GridView ID="GridView1" runat="server">
+                <asp:GridView ID="ConsultaGridView" runat="server">
                 </asp:GridView>
             </td>
         </tr>

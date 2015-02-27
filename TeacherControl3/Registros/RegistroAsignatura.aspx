@@ -4,8 +4,10 @@
     <style type="text/css">
 
         .auto-style3 {
-        width: 65px;
-    }
+        }
+        .auto-style4 {
+            width: 84px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -13,7 +15,7 @@
     </div>
     <table>
         <tr>
-            <td class="auto-style3">
+            <td class="auto-style4">
                 <asp:Label ID="IdAsignatura" runat="server" Text="IdAsignatura"></asp:Label>
             </td>
             <td>
@@ -21,7 +23,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style3">
+            <td class="auto-style4">
                 <asp:Label ID="CodigoLabel" runat="server" Text="Codigo"></asp:Label>
             </td>
             <td>
@@ -29,7 +31,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style3">
+            <td class="auto-style4">
                 <asp:Label ID="NombreLabel" runat="server" Text="Nombre"></asp:Label>
             </td>
             <td>
@@ -37,7 +39,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style3">
+            <td class="auto-style4">
                 <asp:Label ID="CreditosLabel" runat="server" Text="Creditos"></asp:Label>
             </td>
             <td>
@@ -45,7 +47,22 @@
             </td>
         </tr>
         <tr>
-           
+            <td class="auto-style4">
+                &nbsp;</td>
+            <td>
+                <asp:CheckBox ID="Activo" runat="server" />
+            </td>
         </tr>
-    </table>
+        <tr>
+            <td class="auto-style3" colspan="2">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="NuevoButton" runat="server" OnClick="NuevoButton_Click" Text="Nuevo" />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="EliminarButton" runat="server" OnClick="EliminarButton_Click" Text="Eliminar " />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="GuardarButton" runat="server" Height="32px" OnClick="GuardarButton_Click" Text="Guardar" Width="82px" />
+                &nbsp;
+            </td>
+        </tr>
+        </table>
     </asp:Content>
