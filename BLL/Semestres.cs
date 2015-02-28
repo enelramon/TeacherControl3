@@ -23,8 +23,6 @@ namespace BLL
 
         ConexionDb conexion = new ConexionDb();
 
-      
-
         public bool Insertar()
         {
             bool paso = false;

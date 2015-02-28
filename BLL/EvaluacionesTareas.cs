@@ -19,7 +19,7 @@ namespace BLL
 
         ConexionDb Conexion = new ConexionDb();
 
-        public  EvaluacionesTareas()
+        public EvaluacionesTareas()
         {
             IdEstudiante = 0;
             IdEvaluacion = 0;
@@ -30,24 +30,27 @@ namespace BLL
 
         public bool Insertar()
         {
-            return Conexion.EjecutarDB("insert into EvaluacionesTareas(Fecha,IdEstudiante,Calificacion)values ('" + Fecha.ToString("MM/dd/yyyy HH:mm:ss") + "' , " + IdEstudiante + "," + Calificacion + ")");
-
+            bool Devuelve = false;
+            IdEvaluacion = Convert.ToInt32(Conexion.ObtenerValorDb("insert into EvaluacionesTareas(Fecha,IdEstudiante,Calificacion)values ('" + Fecha.ToString("MM/dd/yyyy HH:mm:ss") + "' , " + IdEstudiante + "," + Calificacion + ")select @@identity"));
+            if (IdEvaluacion != 0)
+            {
+                Devuelve = true;
+            }
+            return Devuelve;
         }
 
         public bool Modificar()
         {
-            //todo: cree dos evaluaciones de tareas y mofique la segunda. digame que pasa con la primera.
-            return Conexion.EjecuctarDB(" Update EvaluacionesTareas set Fecha = '" + Fecha.ToString("MM/dd/yyyy HH:mm:ss") + "', IdEstudiante=" + IdEstudiante + ", Calificacion=" + Calificacion + ", IdEvaluacion= " + IdEvaluacion);
-
+            bool Devuelve = false;
+            Devuelve = Conexion.EjecuctarDB(" Update EvaluacionesTareas set Fecha = '" + Fecha.ToString("MM/dd/yyyy HH:mm:ss") + "', IdEstudiante=" + IdEstudiante + ", Calificacion=" + Calificacion + ", IdEvaluacion= " + IdEvaluacion);
+            return Devuelve;
         }
 
 
 
-
-
-
-         public bool Eliminar(int prmIdEvaluacion)
+        public static bool Eliminar(int prmIdEvaluacion)
         {
+            ConexionDb Conexion = new ConexionDb();
             return Conexion.EjecutarDB("Delete from EvaluacionesTareas where IdCalificacion = " + prmIdEvaluacion);
         }
 
@@ -66,18 +69,18 @@ namespace BLL
                 this.Fecha = (DateTime)Datos.Rows[0]["Fecha"];
                 this.IdEstudiante = (int)Datos.Rows[0]["IdEstudiante"];
                 this.Calificacion = (int)Datos.Rows[0]["Calificacion"];
-                
+
             }
 
 
             return Retorno;
         }
 
-        public DataTable Listar(string FiltroWhere)
+        public DataTable Listar(string Campos,string FiltroWhere, string FiltroOrderBy)
         {
-            return Conexion.BuscarDb("Select * from EvaluacionesTareas Where " + FiltroWhere);
+            return Conexion.BuscarDb("Select " + Campos + " from EvaluacionesTareas Where " + FiltroWhere + " Order By "+ FiltroOrderBy);
         }
-    
+
 
 
     }
