@@ -10,8 +10,9 @@ namespace BLL
 {
     public class Semestres
     {
-       
-        DataTable dt = new DataTable();
+
+
+
         public int IdSemestre { set; get; }
         public string Codigo { set; get; }
         public DateTime FechaInicio { set; get; }
@@ -20,8 +21,10 @@ namespace BLL
         public DateTime FechaParcial2 { set; get; }
         public DateTime FechaFinal { set; get; }
         public bool esActivo { set; get; }
-
+        DataTable dt = new DataTable();
         ConexionDb conexion = new ConexionDb();
+
+
 
         public bool Insertar()
         {
@@ -38,17 +41,20 @@ namespace BLL
 
         public bool Eliminar()//poner estatico
         {
+            ConexionDb conexion = new ConexionDb();
             return conexion.EjecutarDB("Delete From Semestres Where IdSemestre = " + IdSemestre);
         }
 
         public bool Modificar()
         {
+            ConexionDb conexion = new ConexionDb();
             return conexion.EjecutarDB("Update Semestres set Codigo = " + Codigo + "', FechaInicio ='" + FechaInicio.ToString("dd/MM//yyyy") + "', FechaInicio ='" + FechaFin.ToString("dd/MM//yyyy") + "', FechaParcial1 ='" + FechaParcial1.ToString("dd/MM//yyyy") + "', FechaParcial2 ='" + FechaParcial2.ToString("dd/MM//yyyy") + "', FechaFinal ='" + FechaFinal.ToString("dd/MM//yyyy") + "' where IdEstudiante= " + IdSemestre);
         }
 
 
         public bool Buscar()
         {
+            ConexionDb conexion = new ConexionDb();
             bool retorno = false;
             dt = conexion.BuscarDb("Select * from Semestres where IdSemestre =" + IdSemestre);
             if (dt.Rows.Count > 0)
@@ -65,13 +71,20 @@ namespace BLL
             }
             return retorno;
         }
+
         public DataTable Listar(string campos, string filtro)
         {
+            ConexionDb conexion = new ConexionDb();
             return conexion.BuscarDb("Select " + campos + " from Semestres where " + filtro);
         }
 
 
 
+
+        public bool Eliminar(string p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
