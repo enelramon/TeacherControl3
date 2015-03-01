@@ -72,6 +72,7 @@
     <Content Include="Consultas\ConsultaAsignatura.aspx" />
     <Content Include="Consultas\ConsultaAsitencia.aspx" />
     <Content Include="Consultas\ConsultaEvaluacion.aspx" />
+    <Content Include="Consultas\ConsultaTareas.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
     <Content Include="Consultas\cSemestres.aspx" />
     <Content Include="Css\styles.css" />
@@ -115,6 +116,13 @@
     </Compile>
     <Compile Include="Consultas\ConsultaEvaluacion.aspx.designer.cs">
       <DependentUpon>ConsultaEvaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaTareas.aspx.cs">
+      <DependentUpon>ConsultaTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaTareas.aspx.designer.cs">
+      <DependentUpon>ConsultaTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Consultas\ConsultaUsuario.aspx.cs">
       <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
