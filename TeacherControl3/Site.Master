@@ -19,6 +19,8 @@ License: Creative Commons Attribution
 </head>
 
 <body>
+    <%--<form runat="server">--%>
+        
     <div id="container">
         <header>
             <h1>
@@ -46,7 +48,12 @@ License: Creative Commons Attribution
 
                 <article>
                     <form id="form1" runat="server">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+                        <asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+                        </asp:ContentPlaceHolder>
+
                     </form>
                 </article>
 
@@ -92,5 +99,6 @@ License: Creative Commons Attribution
         </footer>
     </div>
     <%--container--%>
+
 </body>
 </html>

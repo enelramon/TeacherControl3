@@ -16,9 +16,6 @@ namespace BLL
        public string Clave { set; get; }
        public string Email { set; get; }
        public bool esActivo { set; get; }
-       DataTable datos = new DataTable();
-
-       public ConexionDb conexion = new ConexionDb();
 
         public Usuarios()
         {
@@ -27,6 +24,7 @@ namespace BLL
 
        public bool Insertar()
        {
+           ConexionDb conexion = new ConexionDb();
            bool accion = false;
            accion = conexion.EjecutarDB("Insert into Usuarios(Nombre,Clave,Email,esActivo) values('" + Nombre + "','" + Clave + "','" + Email + "','" + esActivo + "')");
            return accion;
@@ -34,6 +32,7 @@ namespace BLL
        
         public bool Modificar()
        {
+           ConexionDb conexion = new ConexionDb();
            bool accion = false;
            accion = conexion.EjecutarDB("Update Usuarios set Nombre = '" + Nombre + "', Clave = '" + Clave + "', Email = '" + Email + "', esActivo = '" + esActivo + "' Where IdUsuario = " + IdUsuario.ToString());
            return accion;
@@ -42,6 +41,7 @@ namespace BLL
 
        public bool Eliminar(int prmIdUsuario)
        {
+           ConexionDb conexion = new ConexionDb();
            bool accion = false;
            accion = conexion.EjecutarDB("Delete from Usuarios where IdUsuario = " + prmIdUsuario);
            return accion;
@@ -51,6 +51,7 @@ namespace BLL
        {
            bool Retorno = false;
            DataTable Datos = new DataTable();
+           ConexionDb conexion = new ConexionDb();
 
            Datos = conexion.BuscarDb("Select * from Usuarios where IdUsuario = " + prmUsuario);
            if (Datos.Rows.Count > 0)
@@ -68,6 +69,7 @@ namespace BLL
 
        public DataTable Listar(string Campos)
        {
+           ConexionDb conexion = new ConexionDb();
            DataTable datos = new DataTable();
            datos = conexion.BuscarDb("Select IdUsuario,Nombre,Email,esActivo from Usuarios Where " + Campos);
            return datos;
@@ -75,7 +77,8 @@ namespace BLL
 
        public bool BuscarId(string Nombre)
        {
-            Boolean paso = false;
+           ConexionDb conexion = new ConexionDb();
+           Boolean paso = false;
            DataTable Datos = new DataTable();
            Datos = conexion.BuscarDb("Select * from Nombre = '" + Nombre + "'");
 
@@ -90,6 +93,7 @@ namespace BLL
 
         public Boolean Autenticar(string pUserName, string pPassword)
         {
+            ConexionDb conexion = new ConexionDb();
             Boolean retorno = false;
             object idUsuario = conexion.ObtenerValorDb("SELECT IdUsuario from Usuarios Where Usuarios = '" + pUserName + "' And Clave = '" + pPassword + "'");
 

@@ -19,7 +19,7 @@ namespace DAL
         //}
 
         //public static SqlConnection con = new SqlConnection(@"Data Source=.\SqlExpress;Initial Catalog=TeacherControlDb;Integrated Security=True");
-        public static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Joelmy\Source\Repos\TeacherControl3\TeacherControl3\App_Data\TeacherControlDb.mdf;Integrated Security=True;Connect Timeout=30");
+        public static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\TeacherControlDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         public string ultimoError;
 
@@ -44,7 +44,7 @@ namespace DAL
                 cmd.ExecuteNonQuery(); // ejecutamos el comando
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
                 throw;

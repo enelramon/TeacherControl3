@@ -11,12 +11,15 @@ namespace TeacherControl3.Registros
 {
     public partial class rSemestres : System.Web.UI.Page
     {
-        Semestres semestres = new Semestres();
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Semestres semestre = new Semestres();
+
             if (!IsPostBack)
             {
+                Session["Modificando"] = false;
                 int IdSemestre = 0;
 
                 IdSemestre = Util.ObtenerEntero(Request.QueryString["IdSemestre"]);
@@ -25,70 +28,122 @@ namespace TeacherControl3.Registros
                 {
                     ClearButton.Visible = true;
                     SaveButton.Visible = true;
-
                     IdSemestreTextBox.Visible = true;
-
                     IdSemestreTextBox.Text = IdSemestre.ToString();
 
 
                 }
 
-                if (semestres.Buscar())
+                if (semestre.Buscar())
                 {
-                    CodigoTextBox.Text = semestres.Codigo;
-                    FechaInicio.Text = semestres.FechaInicio.ToString("yyyy-MM-dd");
-                    FechaFin0.Text = semestres.FechaFin.ToString("yyyy-MM-dd");
-                    FechaParcial1.Text = semestres.FechaInicio.ToString("yyyy-MM-dd");
-                    FechaParcial2.Text = semestres.FechaParcial1.ToString("yyyy-MM-dd");
-                    FechaFinal.Text = semestres.FechaFinal.ToString("yyyy-MM-dd");
-                    esActivoCheckBox.Checked = semestres.esActivo;
+                    LlenaCampo(semestre);
                 }
             }
         }
 
-        protected void SaveButton_Click(object sender, EventArgs e)
+        #region
+        private void LlenaCampo(Semestres semestre)
         {
-            semestres.Codigo = CodigoTextBox.Text;
-            semestres.FechaInicio = DateTime.Parse(FechaInicioTextBox.Text);
-            semestres.FechaFin = DateTime.Parse(FechaFinTextBox.Text);
-            semestres.FechaParcial1 = DateTime.Parse(FechaParcial1TextBox.Text);
-            semestres.FechaParcial2 = DateTime.Parse(FechaParcial2TextBox.Text);
-            semestres.FechaFinal = DateTime.Parse(FechaFinalTextBox.Text);
-            semestres.esActivo = esActivoCheckBox.Checked;
+            IdSemestreTextBox.Text = Convert.ToString(IdSemestreTextBox.Text);
+            CodigoTextBox.Text = semestre.Codigo;
+            FechaInicio.Text = semestre.FechaInicio.ToString("yyyy-MM-dd");
+            FechaFin0.Text = semestre.FechaFin.ToString("yyyy-MM-dd");
+            FechaParcial1.Text = semestre.FechaInicio.ToString("yyyy-MM-dd");
+            FechaParcial2.Text = semestre.FechaParcial1.ToString("yyyy-MM-dd");
+            FechaFinal.Text = semestre.FechaFinal.ToString("yyyy-MM-dd");
+            esActivoCheckBox.Checked = semestre.esActivo;
 
-            if (Request.QueryString["IdSemestre"] != null)
+            if (semestre.Codigo != null)
             {
-                semestres.IdSemestre = int.Parse(Request.QueryString["IdSemestre"]);
-                if (semestres.Modificar())
-                {
-                    Response.Redirect("cSemestres.aspx");
-                }
-                else
-                {
-                    Response.Write("No se pudo modificar");
-                }
+                Session["Modificando"] = true;
             }
             else
             {
-                if (semestres.Insertar())
+                Session["Modificando"] = false;
+            }
+        }
+
+        private void LlenaClase(Semestres semestre)
+        {
+            IdSemestreTextBox.Text = Convert.ToString(IdSemestreTextBox.Text);
+            CodigoTextBox.Text = semestre.Codigo;
+            FechaInicio.Text = semestre.FechaInicio.ToString("yyyy-MM-dd");
+            FechaFin0.Text = semestre.FechaFin.ToString("yyyy-MM-dd");
+            FechaParcial1.Text = semestre.FechaInicio.ToString("yyyy-MM-dd");
+            FechaParcial2.Text = semestre.FechaParcial1.ToString("yyyy-MM-dd");
+            FechaFinal.Text = semestre.FechaFinal.ToString("yyyy-MM-dd");
+            esActivoCheckBox.Checked = semestre.esActivo;
+        }
+
+        private void LimpiarCampos()
+        {
+            IdSemestreTextBox.Enabled = true;
+            Session["Modificando"] = false;
+            CodigoTextBox.Text = "";
+            FechaInicioTextBox.Text = "";
+            FechaFinTextBox.Text = "";
+            FechaParcial1TextBox.Text = "";
+            FechaParcial2TextBox.Text = "";
+            FechaFinalTextBox.Text = "";
+        }
+
+
+        protected void SaveButton_Click(object sender, EventArgs e)
+        {
+            //semestre.Codigo = CodigoTextBox.Text;
+            //semestre.FechaInicio = DateTime.Parse(FechaInicioTextBox.Text);
+            //semestre.FechaFin = DateTime.Parse(FechaFinTextBox.Text);
+            //semestre.FechaParcial1 = DateTime.Parse(FechaParcial1TextBox.Text);
+            //semestre.FechaParcial2 = DateTime.Parse(FechaParcial2TextBox.Text);
+            //semestre.FechaFinal = DateTime.Parse(FechaFinalTextBox.Text);
+            //semestre.esActivo = esActivoCheckBox.Checked;
+
+            Semestres semestre = new Semestres();
+            LlenaClase(semestre);
+            if (Convert.ToBoolean(Session["Modificando"]) == false)
+            {
+                if (semestre.Insertar())
                 {
-                    Limpiar();
-                    Response.Write("Se ha Guardado correctamente");
+                    Response.Write("Registro realizado con exito");
+                    LimpiarCampos();
+                }
+
+                else
+                {
+                    Response.Write("Error de registro");
+                }
+
+
+
+                if (Request.QueryString["IdSemestre"] != null)
+                {
+                    semestre.IdSemestre = int.Parse(Request.QueryString["IdSemestre"]);
+
+                    if (semestre.Insertar())
+                    {
+                        LimpiarCampos();
+                        Response.Write("Se ha Guardado correctamente");
+                    }
+
+                    else
+                        if (semestre.Modificar())
+                        {
+                            Response.Redirect("cSemestres.aspx");
+                        }
+                        else
+                        {
+                            Response.Write("No se pudo modificar");
+                        }
                 }
 
             }
-
         }
 
 
-        private void Limpiar()
-        {
-            Response.Redirect("rSemestres.aspx");
-        }
 
         protected void ClearButton_Click(object sender, EventArgs e)
         {
-            Limpiar();
+            LimpiarCampos();
         }
 
         protected void esActivoCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -96,8 +151,22 @@ namespace TeacherControl3.Registros
 
         }
 
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            Semestres semestre = new Semestres();
+            if (semestre.Eliminar(IdSemestreTextBox.Text) == true)
+            {
+                Response.Write("Semestre Eliminado");
+                LimpiarCampos();
+            }
+            else
+            {
+                Response.Write("Selecione el semestre que decea eliminar");
+            }
+        }
+
 
     }
-
+        #endregion "metodos"
 
 }
