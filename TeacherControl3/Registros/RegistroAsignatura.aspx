@@ -36,6 +36,7 @@
             </td>
             <td>
                 <asp:TextBox ID="NombreTextBox" runat="server" Width="147px"></asp:TextBox>
+            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NombreTextBox" ErrorMessage="RequiredFieldValidator" ForeColor="Red">El Campo &quot; Nombre &quot; No puede estar vacio.</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -44,7 +45,7 @@
             </td>
             <td>
                 <asp:TextBox ID="CreditosTextBox" runat="server" Width="70px"></asp:TextBox>
-            </td>
+            &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style4">
