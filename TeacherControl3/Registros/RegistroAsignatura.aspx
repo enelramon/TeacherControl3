@@ -20,6 +20,8 @@
             </td>
             <td>
                 <asp:TextBox ID="IdAsignaturaTextBox" runat="server" style="margin-left: 0px" Width="70px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="BuscarButton" runat="server" OnClick="BuscarButton_Click" Text="Buscar" />
             </td>
         </tr>
         <tr>
@@ -36,7 +38,7 @@
             </td>
             <td>
                 <asp:TextBox ID="NombreTextBox" runat="server" Width="147px"></asp:TextBox>
-            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NombreTextBox" ErrorMessage="RequiredFieldValidator" ForeColor="Red">El Campo &quot; Nombre &quot; No puede estar vacio.</asp:RequiredFieldValidator>
+            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NombreTextBox" ErrorMessage="RequiredFieldValidator" ForeColor="Red">El campo &quot; Nombre &quot; no puede estar vacio.</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -56,7 +58,7 @@
         </tr>
         <tr>
             <td class="auto-style3" colspan="2">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                 <asp:Button ID="NuevoButton" runat="server" OnClick="NuevoButton_Click" Text="Nuevo" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="EliminarButton" runat="server" OnClick="EliminarButton_Click" Text="Eliminar " />
