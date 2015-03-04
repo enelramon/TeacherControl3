@@ -28,6 +28,7 @@ namespace BLL
 
         public bool Insertar()
         {
+            ConexionDb conexion = new ConexionDb();
             bool paso = false;
             paso = conexion.EjecutarDB("Insert into Semestres (Codigo, FechaInicio, FechaFin, FechaParcial1, FechaParcial2, FechaFinal, esActivo) Values ('" + Codigo + "', '" + FechaInicio.ToString("MM/dd/yyyy") + "', '" + FechaFin.ToString("MM/dd/yyyy") + "', '" + FechaParcial1.ToString("MM/dd/yyyy") +
                 "','" + FechaParcial2.ToString("MM/dd/yyyy") + "', '" + FechaFinal.ToString("MM/dd/yyyy") + "' , '" + esActivo + "' )");
