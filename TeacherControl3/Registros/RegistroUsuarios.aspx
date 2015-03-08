@@ -93,7 +93,7 @@
             <td class="auto-style1">
                 &nbsp;</td>
             <td colspan="2">
-                <asp:CheckBox ID="esActivoCheckBox" runat="server" />
+                <asp:CheckBox ID="esActivoCheckBox" runat="server" OnCheckedChanged="esActivoCheckBox_CheckedChanged" />
             </td>
         </tr>
         <tr>

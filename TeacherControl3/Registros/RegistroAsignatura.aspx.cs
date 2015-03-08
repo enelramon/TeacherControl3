@@ -67,5 +67,22 @@ namespace TeacherControl3.Registros
         {
             LimpiarCampos();
         }
+
+        protected void BuscarButton_Click(object sender, EventArgs e)
+        {
+            Asignaturas Buscar = new Asignaturas();
+            bool mensaje = false;
+            int Numero;
+            int.TryParse(IdAsignaturaTextBox.Text, out Numero);
+            mensaje = Buscar.Buscar(Numero);
+            if (mensaje == true)
+            {
+
+                CodigoTextBox.Text = Buscar.Codigo.ToString();
+                NombreTextBox.Text = Buscar.Nombre;
+                CreditosTextBox.Text = Buscar.Creditos.ToString();
+                Activo.Text = Buscar.esActivo.ToString();
+            }
+        }
     }
 }

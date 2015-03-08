@@ -16,6 +16,7 @@ IdSemestre int not null,
 IdAsignatura int not null
 Descripcion varchar(200)  not null)
 
+
 Create Table Semestres(IdSemestre int identity(1,1) primary key NOT NULL,
 Codigo varchar(6),
 FechaInicio date,
