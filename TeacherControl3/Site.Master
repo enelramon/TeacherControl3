@@ -64,22 +64,32 @@ License: Creative Commons Attribution
 
                 <ul>
                     <li>
-                        <h4>Categorias</h4>
+                        <h4>Registros</h4>
                         <ul>
                             <li><a href="index.html">Pagina Principal</a></li>
-                            <li><a href="examples.html">Ucne</a></li>
-                            <li><a href="Registros/rSemestres.aspx">Semestres</a></li>
-                            <li><a href="#">Sed aliquam libero ut velit bibendum</a></li>
-                            <li><a href="#">Maecenas condimentum velit vitae</a></li>
+                            <li><a href="../Registros/RegistroUsuarios.aspx">Usuarios</a></li>
+                            <li><a href="../Registros/rSemestres.aspx">Semestres</a></li>
+                            <li><a href="../Registros/RegistroAsignatura.aspx">Asignaturas</a></li>
+
+                            <li><a href="../Registros/RegistroEstudiantes.aspx">Estudiantes</a> </li>
+                            <li><a href="../Registros/RegitroAsistencia.aspx">Pasar Asistencia</a></li>
+                            <li><a href="../Registros/RegistroTareas.aspx">Registrar Tareas</a></li>
+                            <li><a href="../Registros/RegistroEvaluacionTareas.aspx">Evaluar Tareas</a></li>
+
                         </ul>
                     </li>
 
                     <li>
-                        <h4>Helpful Links</h4>
+                        <h4>Consultas</h4>
                         <ul>
-                            <li><a href="http://www.themeforest.net/?ref=spykawg" title="premium templates">Premium HTML web templates from $10</a></li>
-                            <li><a href="http://www.dreamhost.com/r.cgi?259541" title="web hosting">Cheap web hosting from Dreamhost</a></li>
-                            <li><a href="http://tuxthemes.com" title="Tux Themes">Premium WordPress themes</a></li>
+                            <li><a href="../Consultas/ConsultaUsuario.aspx">Usuarios </a> </li>
+                            <li><a href="../Consultas/cSemestres.aspx">Semestres</a></li>
+                            <li><a href="../Consultas/ConsultaAsignatura.aspx">Asignaturas</a></li>
+                            <li>Estudiantes</li>
+
+                            <li><a href="../Consultas/ConsultaAsitencia.aspx">Asitencias</a></li>
+                            <li><a href="../Consultas/ConsultaTareas.aspx">Tareas</a></li>
+                            <li><a href="../Consultas/ConsultaEvaluacion.aspx">Evaluaciones de Tareas</a></li>
                         </ul>
                     </li>
 
