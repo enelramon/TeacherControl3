@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+
 namespace TeacherControl3.Registros
 {
     public partial class RegistroTareas : System.Web.UI.Page
@@ -52,7 +53,7 @@ namespace TeacherControl3.Registros
                 {
                      IdtareaTextBox.Text = Request.QueryString["IdTarea"];
 
-                    if(tarea.Buscar(Convert.ToInt32(IdtareaTextBox.Text)))
+                    if(tarea.Buscar())
                     this.LLenarCampos(tarea);
                     
                 }
@@ -66,7 +67,7 @@ namespace TeacherControl3.Registros
             {
                 Tareas tarea = new Tareas();
                 this.LLenarClase(tarea);
-                tarea.Modificar(Convert.ToInt32(Request.QueryString["IdTarea"]));
+                tarea.Modificar();
             }
             else
             {
@@ -79,7 +80,7 @@ namespace TeacherControl3.Registros
         protected void EliminarButton_Click(object sender, EventArgs e)
         {
             Tareas tarea = new Tareas();
-            if (tarea.Eliminar(Convert.ToInt32(Request.QueryString["IdTarea"])))
+            if (tarea.Eliminar(int id))
             {
                 this.VaciarCampos();
             }
@@ -90,5 +91,6 @@ namespace TeacherControl3.Registros
         {
             this.VaciarCampos();
         }
+    }
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using BLL;
 using BLL.Utilitarios;
 
-namespace TeacherControl3
+namespace TeacherControl3.Registros
 {
     public partial class RegistroUsuarios : System.Web.UI.Page
     {
@@ -54,6 +54,7 @@ namespace TeacherControl3
             IdTextBox.Text = Convert.ToString(IdTextBox.Text);
             NombreTextBox.Text = usuario.Nombre;
             ClaveTextBox.Text = usuario.Clave;
+            ConfirmarTextBox.Text = usuario.Clave;
             EmailTextBox.Text = usuario.Email;
             esActivoCheckBox.Checked = usuario.esActivo;
 
@@ -85,6 +86,7 @@ namespace TeacherControl3
             IdTextBox.Text = "";
             NombreTextBox.Text = "";
             ClaveTextBox.Text = "";
+            ConfirmarTextBox.Text = "";
             EmailTextBox.Text = "";
             esActivoCheckBox.Checked = false;
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistroUsuarios.aspx.cs" Inherits="TeacherControl3.RegistroUsuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistroUsuarios.aspx.cs" Inherits="TeacherControl3.Registros.RegistroUsuarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -58,8 +58,8 @@
                 <asp:Label ID="ClaveLabel" runat="server" Text="Clave" ForeColor="Black"></asp:Label>
             </td>
             <td colspan="2">
-                <asp:TextBox ID="ClaveTextBox" runat="server" Visible="False"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                <asp:TextBox ID="ClaveTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
                      ControlToValidate="ClaveTextBox"
                      ErrorMessage="Introdusca una Clave Valida"
                      ForeColor="Red"
@@ -72,7 +72,14 @@
                 <asp:Label ID="ConfirmarLabel" runat="server" ForeColor="Black" Text="Confirmar Clave"></asp:Label>
             </td>
             <td colspan="2">
-                <asp:TextBox ID="ConfirmarTextBox" runat="server" Visible="False"></asp:TextBox>
+                <asp:TextBox ID="ConfirmarTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                    ControlToValidate="ConfirmarTextBox"
+                    ErrorMessage="Confirme su Clave de Nuevo"
+                    ForeColor="Red"
+                    SetFocusOnError="true">*
+                </asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="ClaveTextBox" ControlToValidate="ConfirmarTextBox"></asp:CompareValidator>
             </td>
         </tr>
         <tr>
@@ -93,7 +100,7 @@
             <td class="auto-style1">
                 &nbsp;</td>
             <td colspan="2">
-                <asp:CheckBox ID="esActivoCheckBox" runat="server" />
+                <asp:CheckBox ID="esActivoCheckBox" runat="server" Text="esActivo" />
             </td>
         </tr>
         <tr>

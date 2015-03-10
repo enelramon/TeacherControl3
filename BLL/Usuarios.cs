@@ -14,8 +14,10 @@ namespace BLL
        public int IdUsuario { set; get; }
        public string Nombre { set; get; }
        public string Clave { set; get; }
+       public string Confirmar { set; get; }
        public string Email { set; get; }
        public bool esActivo { set; get; }
+       DataTable Datos = new DataTable();
 
         public Usuarios()
         {
@@ -26,7 +28,7 @@ namespace BLL
        {
            ConexionDb conexion = new ConexionDb();
            bool accion = false;
-           accion = conexion.EjecutarDB("Insert into Usuarios(Nombre,Clave,Email,esActivo) values('" + Nombre + "','" + Clave + "','" + Email + "','" + esActivo + "')");
+           accion = conexion.EjecutarDB("Insert into Usuarios(Nombre,Clave,Confirmar,Email,esActivo) values('" + Nombre + "','" + Clave + "','" + Email + "','" + esActivo + "')");
            return accion;
        }
        
@@ -34,7 +36,7 @@ namespace BLL
        {
            ConexionDb conexion = new ConexionDb();
            bool accion = false;
-           accion = conexion.EjecutarDB("Update Usuarios set Nombre = '" + Nombre + "', Clave = '" + Clave + "', Email = '" + Email + "', esActivo = '" + esActivo + "' Where IdUsuario = " + IdUsuario.ToString());
+           accion = conexion.EjecutarDB("Update Usuarios set Nombre = '" + Nombre + "', Clave = '" + Clave + "', Confirmar = '" + Confirmar + "' Email = '" + Email + "', esActivo = '" + esActivo + "' Where IdUsuario = " + IdUsuario.ToString());
            return accion;
 
        }
@@ -60,6 +62,7 @@ namespace BLL
                this.IdUsuario = (int)Datos.Rows[0]["IdUsuario"];
                this.Nombre = (string)Datos.Rows[0]["Nombre"];
                this.Clave = (string)Datos.Rows[0]["Clave"];
+               this.Confirmar = (string)Datos.Rows[0]["Confirmar"];
                this.Email = (string)Datos.Rows[0]["Email"];
                this.esActivo = (bool)Datos.Rows[0]["esActivo"];
            }
@@ -67,11 +70,11 @@ namespace BLL
            return Retorno;
        }
 
-       public DataTable Listar(string Campos)
+       public DataTable Listar(string Campos, string Filtro)
        {
            ConexionDb conexion = new ConexionDb();
            DataTable datos = new DataTable();
-           datos = conexion.BuscarDb("Select IdUsuario,Nombre,Email,esActivo from Usuarios Where " + Campos);
+           datos = conexion.BuscarDb("Select " + Campos + " from Usuarios Where " + Filtro);
            return datos;
        }
 
