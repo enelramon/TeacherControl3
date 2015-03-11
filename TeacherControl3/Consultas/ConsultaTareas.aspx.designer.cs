@@ -7,54 +7,54 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TeacherControl3.Registros {
+namespace TeacherControl3.Consultas {
     
     
-    public partial class sumar {
+    public partial class ConsultaTareas {
         
         /// <summary>
-        /// Control UpdatePanel1.
+        /// Control Label1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control Num1TextBox.
+        /// Control buscarDropDownList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Num1TextBox;
+        protected global::System.Web.UI.WebControls.DropDownList buscarDropDownList;
         
         /// <summary>
-        /// Control Num2TextBox.
+        /// Control buscarTextBox.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Num2TextBox;
+        protected global::System.Web.UI.WebControls.TextBox buscarTextBox;
         
         /// <summary>
-        /// Control TotalLabel.
+        /// Control buscarButton.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalLabel;
+        protected global::System.Web.UI.WebControls.Button buscarButton;
         
         /// <summary>
-        /// Control SumarButton.
+        /// Control consultatareasGridView.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SumarButton;
+        protected global::System.Web.UI.WebControls.GridView consultatareasGridView;
     }
 }
