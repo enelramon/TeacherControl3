@@ -84,6 +84,7 @@
     <Content Include="Registros\RegistroAsignatura.aspx" />
     <Content Include="Registros\RegistroEstudiantes.aspx" />
     <Content Include="Registros\RegistroEvaluacionTareas.aspx" />
+    <Content Include="Registros\registroSemestres.aspx" />
     <Content Include="Registros\RegistroTareas.aspx" />
     <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Registros\RegistroUsuarios.aspx" />
@@ -179,6 +180,13 @@
     </Compile>
     <Compile Include="Registros\RegistroEvaluacionTareas.aspx.designer.cs">
       <DependentUpon>RegistroEvaluacionTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\registroSemestres.aspx.cs">
+      <DependentUpon>registroSemestres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\registroSemestres.aspx.designer.cs">
+      <DependentUpon>registroSemestres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\RegistroTareas.aspx.cs">
       <DependentUpon>RegistroTareas.aspx</DependentUpon>

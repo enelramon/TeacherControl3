@@ -9,6 +9,17 @@
         .auto-style3 {
             width: 431px;
         }
+        .auto-style4 {
+            width: 142px;
+            height: 78px;
+        }
+        .auto-style5 {
+            width: 431px;
+            height: 78px;
+        }
+        .auto-style6 {
+            height: 78px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -24,16 +35,16 @@
                           <td>&nbsp;</td>
                       </tr>
                       <tr>
-                          <td class="auto-style2">&nbsp;&nbsp;<asp:Button ID="NuevoButton" runat="server" OnClick="NuevoButton_Click" Text="Nuevo" />
+                          <td class="auto-style4">&nbsp;&nbsp;<asp:Button ID="NuevoButton" runat="server" OnClick="NuevoButton_Click" Text="Nuevo" />
                           </td>
-                          <td class="auto-style3">Buscar:&nbsp;<asp:DropDownList ID="BuscarDropDownList" runat="server" Width="112px">
+                          <td class="auto-style5">Buscar:&nbsp;<asp:DropDownList ID="BuscarDropDownList" runat="server" Width="112px">
                               <asp:ListItem>Id</asp:ListItem>
                               <asp:ListItem>Codigo</asp:ListItem>
                               </asp:DropDownList>
                               <asp:TextBox ID="BuscarTextBox" runat="server"></asp:TextBox>
                               <asp:Button ID="BuscarButton" runat="server" OnClick="BuscarButton_Click" Text="Buscar" />
                           </td>
-                          <td>&nbsp;</td>
+                          <td class="auto-style6"></td>
                       </tr>
                       <tr>
                           <td colspan="3">
@@ -43,7 +54,8 @@
                           <td colspan="3">
                               <asp:GridView ID="BuscarGridView" runat="server">
                                   <Columns>
-                                      <asp:HyperLinkField DataNavigateUrlFields="IdSemestre" DataNavigateUrlFormatString="rSemestres.aspx?IdSemestre={0}" Text="Editar" />
+                                      <asp:HyperLinkField DataNavigateUrlFields="IdSemestre" DataNavigateUrlFormatString="~/Registros/rSemestres.aspx?IdSemestre={0}" Text="Editar" />
+                                      <asp:HyperLinkField DataNavigateUrlFields="IdSemestre" DataNavigateUrlFormatString="~/Registros/rSemestres.aspx" Text="Nuevo" />
                                   </Columns>
                               </asp:GridView>
                           </td>

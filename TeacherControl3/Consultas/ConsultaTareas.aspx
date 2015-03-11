@@ -26,9 +26,6 @@
         <tr>
             <td colspan="4">
                 <asp:GridView ID="consultatareasGridView" runat="server">
-                    <Columns>
-                        <asp:HyperLinkField DataNavigateUrlFields="IdTarea" DataNavigateUrlFormatString="RegistroTareas.aspx?IdTarea ={0}" Text="Editar" />
-                    </Columns>
                 </asp:GridView>
             </td>
         </tr>
