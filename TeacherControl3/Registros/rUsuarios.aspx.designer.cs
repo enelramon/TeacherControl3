@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TeacherControl3 {
+namespace TeacherControl3.Registros {
     
     
-    public partial class RegistroUsuarios {
+    public partial class rUsuarios {
         
         /// <summary>
         /// RuLabel control.
