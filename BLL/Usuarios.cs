@@ -17,7 +17,7 @@ namespace BLL
        public string Confirmar { set; get; }
        public string Email { set; get; }
        public bool esActivo { set; get; }
-       DataTable Datos = new DataTable();
+       //DataTable Datos = new DataTable();
 
         public Usuarios()
         {
@@ -28,7 +28,7 @@ namespace BLL
        {
            ConexionDb conexion = new ConexionDb();
            bool accion = false;
-           accion = conexion.EjecutarDB("Insert into Usuarios(Nombre,Clave,Confirmar,Email,esActivo) values('" + Nombre + "','" + Clave + "','" + Email + "','" + esActivo + "')");
+           accion = conexion.EjecutarDB("Insert into Usuarios(Nombre,Clave,Confirmar,Email,esActivo) values('" + Nombre + "','" + Clave + "','" + Confirmar +"','" + Email + "','" + esActivo + "')");
            return accion;
        }
        

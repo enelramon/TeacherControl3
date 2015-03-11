@@ -76,6 +76,7 @@
     <Content Include="Consultas\ConsultaTareas.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
     <Content Include="Consultas\cSemestres.aspx" />
+    <Content Include="Consultas\cUsuario.aspx" />
     <Content Include="Css\styles.css" />
     <Content Include="Default.aspx" />
     <Content Include="Imagenes\image.jpg" />
@@ -89,6 +90,7 @@
     <Content Include="Registros\RegitroAsistencia.aspx" />
     <Content Include="Registros\RegistroUsuarios.aspx" />
     <Content Include="Registros\rSemestres.aspx" />
+    <Content Include="Registros\rUsuarios.aspx" />
     <Content Include="Registros\sumar.aspx" />
     <Content Include="Script TeacherControl\Scripts.sql" />
     <Content Include="packages.config" />
@@ -139,6 +141,13 @@
     </Compile>
     <Compile Include="Consultas\cSemestres.aspx.designer.cs">
       <DependentUpon>cSemestres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cUsuario.aspx.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cUsuario.aspx.designer.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -216,6 +225,13 @@
     <Compile Include="Registros\rSemestres.aspx.designer.cs">
       <DependentUpon>rSemestres.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rUsuarios.aspx.cs">
+      <DependentUpon>rUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rUsuarios.aspx.designer.cs">
+      <DependentUpon>rUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\sumar.aspx.cs">
       <DependentUpon>sumar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -247,10 +263,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLLTests\BLLTests.csproj">
-      <Project>{da1994d2-d3ee-479b-a32c-db6ec8b929a3}</Project>
-      <Name>BLLTests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{c3bba75f-8d61-46dd-96c3-3db5435c4533}</Project>
       <Name>BLL</Name>

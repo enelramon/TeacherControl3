@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.Security;
 using System.Web.UI.WebControls;
 using BLL;
 using BLL.Utilitarios;
 
-namespace TeacherControl3.Registros
+namespace TeacherControl3
 {
     public partial class RegistroUsuarios : System.Web.UI.Page
     {
