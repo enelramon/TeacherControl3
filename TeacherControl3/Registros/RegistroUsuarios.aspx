@@ -1,49 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistroUsuarios.aspx.cs" Inherits="TeacherControl3.RegistroUsuarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
     <style type="text/css">
-        .auto-style1 {
-            width: 194px;
-        }
-        .auto-style2 {
-            width: 255px;
-        }
-        .auto-style3 {
-            width: 194px;
-            height: 51px;
-        }
-        .auto-style4 {
-            height: 51px;
+        .panel-heading {
+            height: 79px;
         }
     </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table style="width:100%;">
-        <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
-                <asp:Label ID="RuLabel" runat="server" Text="Registro de Usuario" Font-Bold="True" Font-Size="Medium" Font-Underline="False" ForeColor="Blue"></asp:Label>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style1">
-                <asp:Label ID="IdUsuarioLabel" runat="server" Text="IdUsuario" ForeColor="Black"></asp:Label>
-            </td>
-            <td colspan="2">
-                <asp:TextBox ID="IdTextBox" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+   <div class="panel panel-success">
+        <div class="panel panel-heading" style="background-color: #336699; color: Black; font-weight: bold;">Registro de Usuario</div>
+        <div class=" panel-body">
+
+            <%--IdUsuario--%>
+            <div class=" form-horizontal col-md-12" role="form">
+                <div class="form-group">
+                <label for="IdUsuarioLabel" class="col-md-2 control-label input-sm" style="color: Black">IdUsuario</label>
+                <div class="col-lg-9">
+                    <asp:TextBox ID="IdTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
                      ControlToValidate="IdTextBox"
                      ErrorMessage="Introdusca un Id valido"
                      ForeColor="Red"
                      SetFocusOnError="true">*
                 </asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style1">
-                <asp:Label ID="NombreLabel" runat="server" Text="Nombre" ForeColor="Black"></asp:Label>
-            </td>
-            <td colspan="2">
+                </div>
+                </div>
+                
+             <%--Nombre--%>
+                <div class="form-group">
+                <label for="NombreLabel" class="col-md-2 control-label input-sm" style="color: Black">Nombre</label>
+                <div class="col-lg-9">
                 <asp:TextBox ID="NombreTextBox" runat="server" Width="232px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="NombreTextBox" 
@@ -51,13 +39,13 @@
                     ForeColor="Red"
                     SetFocusOnError="true">*
                 </asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style1">
-                <asp:Label ID="ClaveLabel" runat="server" Text="Clave" ForeColor="Black"></asp:Label>
-            </td>
-            <td colspan="2">
+                </div>
+                </div>
+
+                 <%--Clave--%>
+                <div class="form-group">
+                <label for="ClaveLabel" class="col-md-2 control-label input-sm" style="color: Black">Clave</label>
+                <div class="col-lg-9"> 
                 <asp:TextBox ID="ClaveTextBox" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                      ControlToValidate="ClaveTextBox"
@@ -65,13 +53,13 @@
                      ForeColor="Red"
                      SetFocusOnError="true">*
                 </asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style1">
-                <asp:Label ID="ConfirmarLabel" runat="server" ForeColor="Black" Text="Confirmar Clave"></asp:Label>
-            </td>
-            <td colspan="2">
+                </div>
+                </div>
+ 
+                <%--Confirmar Clave--%>
+                <div class="form-group">
+                <label for="ConfirmarClaveLabel" class="col-md-2 control-label input-sm" style="color: Black">Confirmar Clave</label>
+                <div class="col-lg-9"> 
                 <asp:TextBox ID="ConfirmarTextBox" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
                      ControlToValidate="ConfirmarTextBox"
@@ -83,14 +71,15 @@
                      ControlToCompare="ClaveTextBox" ControlToValidate="ConfirmarTextBox"
                      ErrorMessage="La clave es incorrecta introduscala de nuevo"
                      ForeColor="Red"
-                     SetFocusOnError="true">* </asp:CompareValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">
-                <asp:Label ID="EmailLabel" runat="server" Text="Email" ForeColor="Black"></asp:Label>
-            </td>
-            <td colspan="2" class="auto-style4">
+                     SetFocusOnError="true">* 
+                </asp:CompareValidator>
+                </div>
+                </div>
+   
+                 <%--Email--%>
+                <div class="form-group">
+                <label for="EmailLabel" class="col-md-2 control-label input-sm" style="color: Black">Email</label>
+                <div class="col-lg-9"> 
                 <asp:TextBox ID="EmailTextBox" runat="server" Width="231px"></asp:TextBox>
                 <asp:CustomValidator ID="CustomValidator1" runat="server"
                      ControlToValidate="EmailTextBox"
@@ -101,30 +90,33 @@
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                     ControlToValidate="EmailTextBox" 
                     ErrorMessage="Escriba un Email valido" 
-                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                    ></asp:RegularExpressionValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style1">
-                &nbsp;</td>
-            <td colspan="2">
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+                </asp:RegularExpressionValidator>
+                </div>
+                </div>
+
+                 <%--Activo--%>
+                 <div class="form-group">
+                <label for="ActivoLabel" class="col-md-2 control-label input-sm" style="color: black">Activo</label>
+                <div class="col-lg-9">
                 <asp:CheckBox ID="esActivoCheckBox" runat="server" OnCheckedChanged="esActivoCheckBox_CheckedChanged" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
+                </div>
+                </div>
+
+                </div>
+
+                <div class="panel-group">
+                <div class="col-md-12">
                 <asp:Button ID="ClearButton" runat="server" OnClick="ClearButton_Click" Text="Clear" Width="100px" />
                 <asp:Button ID="SaveButton" runat="server" OnClick="SaveButton_Click" Text="Save" Width="100px" />
                 <asp:Button ID="DeleteButton" runat="server" OnClick="DeleteButton_Click" Text="Delete" Width="100px" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
+                </div>
+                </div>
                 <asp:Label ID="MsjLabel" runat="server" Text="MsjLabel"></asp:Label>
-                <br />
+                
                 <asp:ValidationSummary ID="ValidationSummary" runat="server" ForeColor="Red" HeaderText="Problema de Resgistro:" />
-            </td>
-        </tr>
-    </table>
+           
+               </div>
+    </div>
+
 </asp:Content>

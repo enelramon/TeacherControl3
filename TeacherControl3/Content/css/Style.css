@@ -1,0 +1,173 @@
+﻿.item {
+    background: #333;
+    text-align: center;
+    height: 200px !important;
+}
+
+.carouselP {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.bs-example {
+    margin: 20px;
+}
+
+.blueSag {
+    color: #2fa4e7;
+    border-color: rgba(30,87,153,1);
+}
+
+.greenSag {
+    color: #4ecc23;
+    border-color: #00ff21;
+}
+
+.NoResize {
+    max-width: 699px;
+}
+
+.login {
+    width: 600px;
+    height: 300px;
+    background-color: -moz-linear-gradient(top, rgba(125,185,232,0.57) 0%, rgba(125,185,232,0.59) 5%, rgba(32,124,202,0.78) 49%, rgba(41,137,216,0.78) 50%, rgba(30,87,153,1) 100%); /* FF3.6+ */
+    background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,0.57)), color-stop(5%,rgba(125,185,232,0.59)), color-stop(49%,rgba(32,124,202,0.78)), color-stop(50%,rgba(41,137,216,0.78)), color-stop(100%,rgba(30,87,153,1))); /* Chrome,Safari4+ */
+    background-color: -webkit-linear-gradient(top, rgba(125,185,232,0.57) 0%,rgba(125,185,232,0.59) 5%,rgba(32,124,202,0.78) 49%,rgba(41,137,216,0.78) 50%,rgba(30,87,153,1) 100%); /* Chrome10+,Safari5.1+ */
+    background-color: -o-linear-gradient(top, rgba(125,185,232,0.57) 0%,rgba(125,185,232,0.59) 5%,rgba(32,124,202,0.78) 49%,rgba(41,137,216,0.78) 50%,rgba(30,87,153,1) 100%); /* Opera 11.10+ */
+    background-color: -ms-linear-gradient(top, rgba(125,185,232,0.57) 0%,rgba(125,185,232,0.59) 5%,rgba(32,124,202,0.78) 49%,rgba(41,137,216,0.78) 50%,rgba(30,87,153,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(125,185,232,0.57) 0%,rgba(125,185,232,0.59) 5%,rgba(32,124,202,0.78) 49%,rgba(41,137,216,0.78) 50%,rgba(30,87,153,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#917db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+    border-radius: 40px;
+    padding: 40px;
+    margin: 0 auto 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+    .login h1 {
+        font-weight: 100;
+        text-align: center;
+        font-size: 2.3em;
+    }
+
+
+.textLogin {
+    font-size: x-large;
+}
+
+.TextboxLogin {
+    width: 100%;
+    height: 45px;
+}
+
+
+
+.TamanoTextBox {
+    width: 225px;
+}
+
+.SideBar {
+}
+
+.copyright {
+    font-size: 13px;
+    color: black;
+    bottom: -2px;
+}
+
+
+@media (min-width: 300px) and (max-width: 767px) {
+    .carousel {
+        max-height: 100px;
+        margin-bottom: 20px;
+    }
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+        z-index: 3;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel .item {
+        max-height: 100px;
+        background-color: #fff;
+    }
+
+    .carousel-inner > .item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        max-height: 100px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .carousel {
+        max-height: 150px;
+        margin-bottom: 20px;
+    }
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+        z-index: 5;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel .item {
+        max-height: 150px;
+        background-color: #fff;
+    }
+
+    .carousel-inner > .item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        max-height: 150px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .carousel {
+        max-height: 200px;
+        margin-bottom: 20px;
+    }
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+        z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel .item {
+        max-height: 200px;
+        background-color: #fff;
+    }
+
+    .carousel-inner > .item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        max-height: 200px;
+    }
+}
+
+.RatingRadioButtonList > input.filled {
+}
+
+.RatingRadioButtonList > input.empty {
+}
+
+table span.blue input {
+    -webkit-appearance: initial;
+    background-image:url(../img/Star-On.png);
+    width: 30px;
+    height: 30px;
+}
+table span.red input {
+    -webkit-appearance: initial;
+    background-image:url(../img/Star-Of.png);
+    width: 30px;
+    height: 30px;
+}
