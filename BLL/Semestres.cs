@@ -86,6 +86,21 @@ namespace BLL
         {
             throw new NotImplementedException();
         }
+
+        public static DataTable Listar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Buscar(string p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Buscar(int p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
