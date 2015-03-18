@@ -22,9 +22,9 @@ namespace BLL.Tests
         [TestMethod()]
         public void InsertarTest()
         {
-            usuario.IdUsuario = Convert.ToInt32(" ");
             usuario.Nombre = "juan";
             usuario.Clave = "juanito";
+            usuario.Confirmar = "juanito";
             usuario.Email = "juan@hotmail.com";
             usuario.esActivo = true;
             accion = usuario.Insertar();
@@ -34,38 +34,30 @@ namespace BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            usuario.IdUsuario = Convert.ToInt32(" ");
+            usuario.IdUsuario = 3;
             usuario.Nombre = "jose";
             usuario.Clave = "jesus";
-            usuario.Email = "juan@hotmail.com";
+            usuario.Confirmar = "jesus";
+            usuario.Email = "jose@hotmail.com";
             usuario.esActivo = true;
             accion = usuario.Modificar();
-
-            Assert.AreEqual(true, accion);
+            Assert.AreEqual(accion, true, "Modificado");
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            usuario.IdUsuario = Convert.ToInt32(" ");
-            usuario.Nombre = "juan";
-            usuario.Clave = "juanito";
-            usuario.Email = "juan@hotmail.com";
-            usuario.esActivo = true;
-            accion = usuario.Eliminar(' ');
-
+            usuario.IdUsuario = 1;
+            accion = usuario.Eliminar(1);
             Assert.AreEqual(true, accion);
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            usuario.IdUsuario = Convert.ToInt32(" ");
-            usuario.Nombre = "juan";
-            usuario.Clave = "juanito";
-            usuario.Email = "juan@hotmail.com";
-            usuario.esActivo = true;
-            accion = usuario.Buscar(' ');
+            usuario.IdUsuario = 2;
+   
+            accion = usuario.Buscar(2);
 
             Assert.AreEqual(true, accion);
         }
@@ -73,40 +65,30 @@ namespace BLL.Tests
         [TestMethod()]
         public void ListarTest()
         {
-            usuario.IdUsuario = Convert.ToInt32(" ");
-            usuario.Nombre = "juan";
-            usuario.Clave = "juanito";
-            usuario.Email = "juan@hotmail.com";
-            usuario.esActivo = true;
-            accion = usuario.Listar(" ", " ");
 
-            Assert.AreEqual(true, accion);
+            DataTable Datos = new DataTable();
+            Datos = usuario.Listar(" * ", " 1=1 ");
+
+            Assert.AreNotEqual(0, Datos);
         }
 
         [TestMethod()]
         public void BuscarIdTest()
         {
-            usuario.IdUsuario = Convert.ToInt32(" ");
             usuario.Nombre = "juan";
-            accion = usuario.BuscarId(" ");
+            accion = usuario.BuscarId(" 1=1 ");
 
-            Assert.AreEqual(true, accion);
+            Assert.AreNotEqual(true, accion);
         }
 
         [TestMethod()]
         public void AutenticarTest()
         {
-            usuario.IdUsuario = Convert.ToInt32(" ");
+            usuario.IdUsuario = 2;
             usuario.Clave = "juanito";
-            accion = usuario.Autenticar(" ", " ");
+            accion = usuario.Autenticar("  ", "  ");
 
-            Assert.AreEqual(true, accion);
-        }
-
-        [TestMethod()]
-        public void EliminarTest1()
-        {
-            Assert.Fail();
+            Assert.AreNotEqual(true, accion);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace BLL
        public string Confirmar { set; get; }
        public string Email { set; get; }
        public bool esActivo { set; get; }
-       //DataTable Datos = new DataTable();
+       DataTable Datos = new DataTable();
 
         public Usuarios()
         {
@@ -62,7 +62,7 @@ namespace BLL
                this.IdUsuario = (int)Datos.Rows[0]["IdUsuario"];
                this.Nombre = (string)Datos.Rows[0]["Nombre"];
                this.Clave = (string)Datos.Rows[0]["Clave"];
-               this.Confirmar = (string)Datos.Rows[0]["Confirmar"];
+               //this.Confirmar = (string)Datos.Rows[0]["Confirmar"];
                this.Email = (string)Datos.Rows[0]["Email"];
                this.esActivo = (bool)Datos.Rows[0]["esActivo"];
            }
@@ -83,7 +83,7 @@ namespace BLL
            ConexionDb conexion = new ConexionDb();
            Boolean paso = false;
            DataTable Datos = new DataTable();
-           Datos = conexion.BuscarDb("Select * from Nombre = '" + Nombre + "'");
+           Datos = conexion.BuscarDb("Select * from Usuarios where Nombre = '" + Nombre + "'");
 
            if (Datos.Rows.Count > 0)
            {
@@ -102,15 +102,11 @@ namespace BLL
 
             if (idUsuario != null)
        {
-                retorno = this.Buscar((int)idUsuario);
+                retorno = this.Buscar((int)IdUsuario);
             }
 
             return retorno;
        }
 
-       public bool Eliminar(string p)
-       {
-           throw new NotImplementedException();
-       }
     }
 }

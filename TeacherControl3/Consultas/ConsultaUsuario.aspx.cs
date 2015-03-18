@@ -27,11 +27,11 @@ namespace TeacherControl3.Consultas
         {
             if (BuscarDropDownList.SelectedIndex == 0)
             {
-                Campos += "and Id like '%" + BuscarTextBox.Text + "%'";
+                Filtro += "and Id like '%" + BuscarTextBox.Text + "%'";
             }
             if (BuscarDropDownList.SelectedIndex == 1)
             {
-                Campos += "and Nombre like '%'"+ BuscarTextBox.Text + "%'";
+               Filtro += "and Nombre like '%'"+ BuscarTextBox.Text + "%'";
             }
             BuscarGridView.DataSource = usuario.Listar(Campos, Filtro);
             BuscarGridView.DataBind();
