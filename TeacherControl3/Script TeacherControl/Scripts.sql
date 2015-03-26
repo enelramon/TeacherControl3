@@ -13,7 +13,7 @@ CodigoTarea varchar(10) not null,
 Fecha datetime  not null,
 Vence datetime not null,
 IdSemestre int not null,
-IdAsignatura int not null
+IdAsignatura int not null,
 Descripcion varchar(200)  not null)
 
 

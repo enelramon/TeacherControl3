@@ -67,7 +67,8 @@ License: Creative Commons Attribution
                         <h4>Registros</h4>
                         <ul>
                             <li><a href="index.html">Pagina Principal</a></li>
-                            <li><a href="../Registros/RegistroUsuarios.aspx">Usuarios</a></li>
+                            <li>
+                                <asp:HyperLink ID="UsuariosHyperLink" runat="server" NavigateUrl="~/Registros/RegistroUsuarios.aspx">Usuarios</asp:HyperLink></li>
                             <li><a href="../Registros/rSemestres.aspx">Semestres</a></li>
                             <li><a href="../Registros/RegistroAsignatura.aspx">Asignaturas</a></li>
 

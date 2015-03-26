@@ -17,9 +17,12 @@ namespace BLL
        public string Email { set; get; }
        public bool esActivo { set; get; }
 
+       public int Nivel { get; set; }
+
         public Usuarios()
         {
             this.IdUsuario = 0;
+            this.Nivel = 0;
         }
 
        public bool Insertar()
@@ -109,5 +112,6 @@ namespace BLL
        {
            throw new NotImplementedException();
        }
+
     }
 }

@@ -20,9 +20,13 @@ namespace TeacherControl3
         {
 
             Usuarios Usuario = new Usuarios();
+            Session["Nivel"] = -1;
 
             if (Usuario.Autenticar(UsuarioTextBox.Text, ClaveTextBox.Text))
+            {
                 FormsAuthentication.RedirectFromLoginPage(UsuarioTextBox.Text, true);
+                 Session["Nivel"] = Usuario.Nivel;
+            }
             else
                 ErrorLabel.Text = "Usuario y clave no existen";
         }

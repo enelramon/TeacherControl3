@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using BLL.Utilitarios;
 
 namespace TeacherControl3.Registros
 {
@@ -34,7 +35,10 @@ namespace TeacherControl3.Registros
 
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+          //solo entra si en administrador : nivel=0
+
+            if (Util.ObtenerEntero(Session["Nivel"]) != 0)
+                Response.Redirect("notieneacceso.aspx");
         }
 
         protected void GuardarButton_Click(object sender, EventArgs e)
