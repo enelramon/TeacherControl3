@@ -11,13 +11,14 @@ namespace TeacherControl3.Consultas
     public partial class ConsultaUsuario : System.Web.UI.Page
     {
         Usuarios usuario = new Usuarios();
-        string Campos;
+        string Campos = "IdUsuario,Nombre,Email,esActivo";
+        string Filtro = "1=1";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                BuscarGridView.DataSource = usuario.Listar(Campos);
+                BuscarGridView.DataSource = usuario.Listar(Campos, Filtro);
                 BuscarGridView.DataBind();
             }
         }
@@ -26,13 +27,13 @@ namespace TeacherControl3.Consultas
         {
             if (BuscarDropDownList.SelectedIndex == 0)
             {
-                Campos += "and Id like '%" + BuscarTextBox.Text + "%'";
+                Filtro += "and Id like '%" + BuscarTextBox.Text + "%'";
             }
             if (BuscarDropDownList.SelectedIndex == 1)
             {
-                Campos += "and Nombre like '%'"+ BuscarTextBox.Text + "%'";
+               Filtro += "and Nombre like '%'"+ BuscarTextBox.Text + "%'";
             }
-            BuscarGridView.DataSource = usuario.Listar(Campos);
+            BuscarGridView.DataSource = usuario.Listar(Campos, Filtro);
             BuscarGridView.DataBind();
         }
 

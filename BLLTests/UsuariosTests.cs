@@ -2,72 +2,93 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using BLL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Data;
-
 namespace BLL.Tests
 {
     [TestClass()]
     public class UsuariosTests
     {
+        Usuarios usuario = new Usuarios();
+        bool accion = false;
         [TestMethod()]
         public void UsuariosTest()
         {
-            Assert.Fail();
+
         }
 
         [TestMethod()]
         public void InsertarTest()
         {
-            bool paso =false;
-
-
-
-            Assert.AreEqual(paso, true, "Inserto");
+            usuario.Nombre = "juan";
+            usuario.Clave = "juanito";
+            usuario.Confirmar = "juanito";
+            usuario.Email = "juan@hotmail.com";
+            usuario.esActivo = true;
+            accion = usuario.Insertar();
+            Assert.AreEqual(accion, true, "Inserto");
         }
 
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
+            usuario.IdUsuario = 3;
+            usuario.Nombre = "jose";
+            usuario.Clave = "jesus";
+            usuario.Confirmar = "jesus";
+            usuario.Email = "jose@hotmail.com";
+            usuario.esActivo = true;
+            accion = usuario.Modificar();
+            Assert.AreEqual(accion, true, "Modificado");
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            usuario.IdUsuario = 1;
+            accion = usuario.Eliminar(1);
+            Assert.AreEqual(true, accion);
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            usuario.IdUsuario = 2;
+   
+            accion = usuario.Buscar(2);
+
+            Assert.AreEqual(true, accion);
         }
 
         [TestMethod()]
         public void ListarTest()
         {
-            Assert.Fail();
+
+            DataTable Datos = new DataTable();
+            Datos = usuario.Listar(" * ", " 1=1 ");
+
+            Assert.AreNotEqual(0, Datos);
         }
 
         [TestMethod()]
         public void BuscarIdTest()
         {
-            Assert.Fail();
+            usuario.Nombre = "juan";
+            accion = usuario.BuscarId(" 1=1 ");
+
+            Assert.AreNotEqual(true, accion);
         }
 
         [TestMethod()]
         public void AutenticarTest()
         {
-            Assert.Fail();
-        }
+            usuario.IdUsuario = 2;
+            usuario.Clave = "juanito";
+            accion = usuario.Autenticar("  ", "  ");
 
-        [TestMethod()]
-        public void EliminarTest1()
-        {
-            Assert.Fail();
+            Assert.AreNotEqual(true, accion);
         }
     }
 }

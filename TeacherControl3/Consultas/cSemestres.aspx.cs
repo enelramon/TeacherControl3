@@ -38,15 +38,16 @@ namespace TeacherControl3.Consultas
           
         }
 
-        protected void NuevoButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("rSemestres.aspx");
-        }
-
+       
         private void Buscargrid()
         {
             BuscarGridView.DataSource = semestre.Listar(campos, filtro);
             BuscarGridView.DataBind();
+        }
+
+        protected void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("rSemestres.aspx");
         }
         
     }

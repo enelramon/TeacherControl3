@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.Security;
 using System.Web.UI.WebControls;
 using BLL;
 using BLL.Utilitarios;
@@ -54,6 +55,7 @@ namespace TeacherControl3
             IdTextBox.Text = Convert.ToString(IdTextBox.Text);
             NombreTextBox.Text = usuario.Nombre;
             ClaveTextBox.Text = usuario.Clave;
+            ConfirmarTextBox.Text = usuario.Clave;
             EmailTextBox.Text = usuario.Email;
             esActivoCheckBox.Checked = usuario.esActivo;
 
@@ -85,6 +87,7 @@ namespace TeacherControl3
             IdTextBox.Text = "";
             NombreTextBox.Text = "";
             ClaveTextBox.Text = "";
+            ConfirmarTextBox.Text = "";
             EmailTextBox.Text = "";
             esActivoCheckBox.Checked = false;
 
@@ -139,7 +142,7 @@ namespace TeacherControl3
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
             Usuarios usuario = new Usuarios();
-            if(usuario.Eliminar(IdTextBox.Text) == true)
+            if(usuario.Eliminar(' ') == true)
             {
                 MsjLabel.ForeColor = System.Drawing.Color.Green;
                 MsjLabel.Text = "Usuario Eliminado Correctamente";

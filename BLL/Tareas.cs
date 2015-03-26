@@ -42,7 +42,7 @@ namespace BLL
             return conectar.EjecutarDB("Update Tareas set CodigoTarea ='" + this.CodigoTarea + "', Fecha ='" + this.Fecha.ToString("yyyy/MM/dd") + "', Vence ='" + this.Vence.ToString("yyyy/MM/dd") + "', IdAsignatura= " + this.IdAsignatura + ", Descripcion = '" + this.Descripcion + "' where " + this.IdTarea);
         }
 
-        static bool Eliminar(int id)
+        public static bool Eliminar(int id)
         {
             ConexionDb conectar = new ConexionDb();
             return conectar.EjecutarDB("Delete From Tareas where "+ id);
