@@ -48,7 +48,7 @@ namespace BLL
             return conectar.EjecutarDB("Delete From Tareas where "+ id);
         }
 
-        public DataTable Listar(string campo, string filtro)
+        public static DataTable Listar(string campo, string filtro)
         {
             ConexionDb conectar = new ConexionDb();
             return conectar.BuscarDb("Select " + campo + " from Tareas where " + filtro);

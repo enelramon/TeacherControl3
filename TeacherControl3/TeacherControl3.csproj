@@ -76,6 +76,7 @@
     <Content Include="Consultas\ConsultaTareas.aspx" />
     <Content Include="Consultas\ConsultaUsuario.aspx" />
     <Content Include="Consultas\cSemestres.aspx" />
+    <Content Include="Consultas\cUsuario.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -220,6 +221,13 @@
     </Compile>
     <Compile Include="Consultas\cSemestres.aspx.designer.cs">
       <DependentUpon>cSemestres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cUsuario.aspx.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cUsuario.aspx.designer.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

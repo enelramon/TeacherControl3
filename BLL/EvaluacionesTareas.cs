@@ -46,8 +46,9 @@ namespace BLL
 
 
 
-         public bool Eliminar(int prmIdEvaluacion)
+         public static bool Eliminar(int prmIdEvaluacion)
         {
+            ConexionDb Conexion = new ConexionDb();
             return Conexion.EjecutarDB("Delete from EvaluacionesTareas where IdCalificacion = " + prmIdEvaluacion);
         }
 
@@ -73,9 +74,11 @@ namespace BLL
             return Retorno;
         }
 
-        public DataTable Listar(string FiltroWhere)
+        public static DataTable Listar(string campo, string filtro)
         {
-            return Conexion.BuscarDb("Select * from EvaluacionesTareas Where " + FiltroWhere);
+            ConexionDb conectar = new ConexionDb();
+            return conectar.BuscarDb("Select " + campo + " from EvaluacionesTareas where " + filtro);
+
         }
     
 

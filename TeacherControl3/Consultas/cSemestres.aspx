@@ -61,6 +61,13 @@
                           </td>
                       </tr>
                   </table>
+                  <hr />
+                  <p>
+                  </p>
+                  <p>
+                  </p>
+                  <p>
+                  </p>
     </p>
             </ContentTemplate>
     </asp:UpdatePanel>

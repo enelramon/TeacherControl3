@@ -41,9 +41,13 @@ namespace TeacherControl3.Consultas
        
         private void Buscargrid()
         {
+
             BuscarGridView.DataSource = semestre.Listar(campos, filtro);
             BuscarGridView.DataBind();
-        }
+
+            SemestresDataList.DataSource = semestre.Listar(campos, filtro);
+            SemestresDataList.DataBind();
+        }                  
 
         protected void NuevoButton_Click(object sender, EventArgs e)
         {

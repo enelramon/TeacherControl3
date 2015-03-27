@@ -18,7 +18,7 @@ namespace TeacherControl3
             if(!IsPostBack)
             {
 
-                ConsultaGridView.DataSource = Evaluacion.Listar("IdEstudiante, IdTarea, IdFecha, IdEvaluacion Calificacion","1=1","IdEstudiante");
+                ConsultaGridView.DataSource = EvaluacionesTareas.Listar("IdEstudiante, IdTarea, IdFecha, IdEvaluacion Calificacion", "1=1");
                 ConsultaGridView.DataBind();
 
             }
@@ -35,7 +35,7 @@ namespace TeacherControl3
             {
                 filtro += "and Id like '%" + ConsultaTextBox.Text + "%'";
             }
-            ConsultaGridView.DataSource = Evaluacion.Listar(campos, filtro , "IdEstudiante ");
+            ConsultaGridView.DataSource = EvaluacionesTareas.Listar(campos, filtro );
             ConsultaGridView.DataBind();
 
 
